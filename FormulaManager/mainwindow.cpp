@@ -16,6 +16,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    QPushButton* target = qobject_cast<QPushButton*>(sender());
+    if (target != nullptr)
+    {
+        target->setStyleSheet(QString("#%1 { background-color: red; }").arg(target->objectName()));
+    }
     QSqlDatabase db = QSqlDatabase:: addDatabase("QMYSQL");
     db.setHostName("localhost");
     db.setUserName("root");
@@ -30,3 +35,28 @@ void MainWindow::on_pushButton_clicked()
     }
 }
 
+/*#include "mainwindow.h"
+#include "ui_mainwindow.h"
+
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+    connect(ui->myPushButton, &QPushButton::clicked, this, &MainWindow::onClicked);
+}
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::onClicked()
+{
+    QPushButton* target = qobject_cast<QPushButton*>(sender());
+    if (target != nullptr)
+    {
+        target->setStyleSheet(QString("#%1 { background-color: red; }").arg(target->objectName()));
+    }
+}
+*/

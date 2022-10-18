@@ -16,9 +16,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QSqlDatabase db = QSqlDatabase:: addDatabase("login");
-    db.setHostName("127.0.0.1");
-    db.setUserName("root@localhost");
+    QSqlDatabase db = QSqlDatabase:: addDatabase("QMYSQL");
+    db.setHostName("localhost");
+    db.setUserName("root");
     db.setPassword("password");
     db.setDatabaseName("login");
 

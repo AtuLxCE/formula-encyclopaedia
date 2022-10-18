@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1110</width>
-    <height>744</height>
+    <width>1166</width>
+    <height>745</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>510</x>
       <y>460</y>
       <width>121</width>
       <height>41</height>
@@ -33,11 +33,14 @@
    <widget class="QLabel" name="imagelabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>1101</width>
-      <height>701</height>
+      <x>20</x>
+      <y>10</y>
+      <width>1131</width>
+      <height>731</height>
      </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
     </property>
     <property name="frameShape">
      <enum>QFrame::WinPanel</enum>
@@ -49,7 +52,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>C:/Users/ACER/Desktop/Presentation1.jpg</pixmap>
+     <pixmap>Presentation1.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -63,7 +66,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1110</width>
+     <width>1166</width>
      <height>25</height>
     </rect>
    </property>

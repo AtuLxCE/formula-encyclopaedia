@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include "login.h"
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -18,12 +19,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QPushButton* target = qobject_cast<QPushButton*>(sender());
-    if (target != nullptr)
-    {
-        target->setStyleSheet(QString("#%1 { background-color: green; }").arg(target->objectName()));
-    }
-
+    //MySql Connection
     QSqlDatabase db = QSqlDatabase:: addDatabase("QMYSQL");
     db.setHostName("localhost");
     db.setUserName("root");
@@ -45,10 +41,6 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    QPushButton* target = qobject_cast<QPushButton*>(sender());
-    if (target != nullptr)
-    {
-        target->setStyleSheet(QString("#%1 { background-color: red; }").arg(target->objectName()));
-    }
+    QCoreApplication::quit();
 }
 

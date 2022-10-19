@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/image">
         <file>homescreen.jpg</file>
+        <file>loginbg.jpg</file>
     </qresource>
 </RCC>

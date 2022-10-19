@@ -6,13 +6,33 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1155</width>
-    <height>625</height>
+    <width>893</width>
+    <height>610</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Login</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#Login {
+
+border-image: url(:/image/loginbg.jpg);
+
+}</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>350</y>
+     <width>93</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Try</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QMessageBox>
+#include "login.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -27,6 +29,18 @@ void MainWindow::on_pushButton_clicked()
     db.setUserName("root");
     db.setPassword("password");
     db.setDatabaseName("login");
+
+
+/*   //checking if data base connected no need to un comment
+            if (db.open()){
+            QMessageBox::information(this,"Connection","Database Connected");
+}
+*/
+
+//     for login window
+    Login login_obj;
+    login_obj.setModal(true);
+    login_obj.exec();
 }
 
 void MainWindow::on_pushButton_2_clicked()

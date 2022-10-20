@@ -13,9 +13,13 @@
   <property name="windowTitle">
    <string>FormulaEncyclopedia</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="image.qrc">
+    <normaloff>:/image/logo.jpg</normaloff>:/image/logo.jpg</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">#centralwidget{
-border-image: url(:/image/homescreen.jpg);
+border-image: url(:/image/unknown.jpg);
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -87,8 +91,15 @@ border-image: url(:/image/homescreen.jpg);
      </widget>
     </item>
    </layout>
+   <zorder>commandLinkButton_4</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>commandLinkButton_5</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>commandLinkButton_3</zorder>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
  <connections/>
 </ui>

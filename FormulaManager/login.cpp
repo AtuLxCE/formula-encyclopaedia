@@ -62,7 +62,7 @@ void Login::on_loginBtn_clicked()
                 else if (type == "User"){
                 }
                 else {
-                    //Opening formula manager for Guest
+                    //nothing
                 }
             }
             else{

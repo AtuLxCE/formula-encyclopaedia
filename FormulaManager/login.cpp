@@ -21,6 +21,7 @@ Login::~Login()
 
 void Login::on_loginBtn_clicked()
 {
+    //MySql Connection
      QSqlDatabase db;
     db = QSqlDatabase:: addDatabase("QMYSQL","MyConnect");
     db.setHostName("localhost");
@@ -42,25 +43,35 @@ void Login::on_loginBtn_clicked()
         query.bindValue(":type",type);
 
         if(!query.exec()){
-            QMessageBox::information(this,"Failed","Query Failed To Execute");
+            QMessageBox::information(this,"Failed","Query Failed To  Execute");
         }
         else{
-            while (query.next()){
-                QString usernameFromDB = query.value(0).toString();
-                QString passwordFromDB = query.value(1).toString();
-                QString typeFromDB = query.value(2).toString();
+            if (type == "Guest"){
+                QMessageBox::information(this,"Guest","This is guest");
+            }
 
-                if (usernameFromDB == username && passwordFromDB == password && typeFromDB == type){
-                    QMessageBox::information(this,"Success","Login Succcess");
+            while (query.next()){
+            QString usernameFromDB = query.value(0).toString();
+            QString passwordFromDB = query.value(1).toString();
+            QString typeFromDB = query.value(2).toString();
+
+            if (usernameFromDB == username && passwordFromDB == password && typeFromDB == type){
+                QMessageBox::information(this,"Success","Login Succcess");
+                if (type == "Admin"){
                 }
-                else{
-                    QMessageBox::information(this,"Fail","Login Fail");
+                else if (type == "User"){
+                }
+                else {
+                    //Opening formula manager for Guest
                 }
             }
+            else{
+                QMessageBox::information(this,"Fail","Login Failed");
+            }
+            }             
         }
     }
     else {
         QMessageBox::information(this,"Database failed","Database Connection Failed");
     }
 }
-

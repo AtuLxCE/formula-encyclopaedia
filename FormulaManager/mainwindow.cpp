@@ -19,20 +19,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    //MySql Connection
-//    QSqlDatabase db = QSqlDatabase:: addDatabase("QMYSQL");
-//    db.setHostName("localhost");
-//    db.setUserName("root");
-//    db.setPassword("password");
-//    db.setDatabaseName("login");
-
-
-/*   //checking if data base connected no need to un comment
-            if (db.open()){
-            QMessageBox::information(this,"Connection","Database Connected");
-}
-*/
-
 //     for login window
     Login login_obj;
     login_obj.setModal(true);

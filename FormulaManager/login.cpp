@@ -1,5 +1,7 @@
 #include "login.h"
 #include "ui_login.h"
+#include "afterlogin.h"
+
 
 Login::Login(QWidget *parent) :
     QDialog(parent),
@@ -21,6 +23,7 @@ Login::~Login()
 
 void Login::on_loginBtn_clicked()
 {
+    close();
     //MySql Connection
      QSqlDatabase db;
     db = QSqlDatabase:: addDatabase("QMYSQL","MyConnect");
@@ -47,7 +50,7 @@ void Login::on_loginBtn_clicked()
         }
         else{
             if (type == "Guest"){
-                QMessageBox::information(this,"Guest","This is guest");
+                QMessageBox::information(this,"Guest","Logged in as a Guest");
             }
 
             while (query.next()){
@@ -56,10 +59,16 @@ void Login::on_loginBtn_clicked()
             QString typeFromDB = query.value(2).toString();
 
             if (usernameFromDB == username && passwordFromDB == password && typeFromDB == type){
-                QMessageBox::information(this,"Success","Login Succcess");
                 if (type == "Admin"){
+                    QMessageBox::information(this,"Admin","Logged in as an Admin");
+                    afterLogin afterlogin_obj;
+                    afterlogin_obj.setModal(true);
+                    afterlogin_obj.exec();
+                    //login for admin
                 }
                 else if (type == "User"){
+                    //login for user
+                    QMessageBox::information(this,"User","Logged in as an User");
                 }
                 else {
                     //nothing

@@ -6,6 +6,7 @@
 #include <QtSql>
 #include <QSqlDatabase>
 #include<QMessageBox>
+#include <QStackedWidget>
 
 namespace Ui {
 class Login;

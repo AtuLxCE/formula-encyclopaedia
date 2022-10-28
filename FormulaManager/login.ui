@@ -37,40 +37,44 @@ border-image:
 border-image:url(:/image/topPannel.jpg);
 }</string>
    </property>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>30</y>
-      <width>541</width>
-      <height>61</height>
+      <x>260</x>
+      <y>40</y>
+      <width>311</width>
+      <height>51</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QWidget" name="logo" native="true">
-       <property name="styleSheet">
-        <string notr="true">#logo{
-border-image: url(:/image/logo.jpg)
-}</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="font">
-        <font>
-         <family>MS Serif</family>
-         <pointsize>24</pointsize>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Formula Encylopedia Login</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>24</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Formula Encyclopedia Login</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>40</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="image.qrc">:/image/logo.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
    </widget>
   </widget>
   <widget class="QGroupBox" name="groupBox">

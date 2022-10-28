@@ -12,9 +12,9 @@ Login::Login(QWidget *parent) :
     ui->setupUi(this);
     ui->comboBox->setPlaceholderText("Select UserType");
     ui->comboBox->setCurrentIndex(-1);
-    ui ->comboBox->addItem("Admin");
-    ui ->comboBox->addItem("User");
-    ui ->comboBox->addItem("Guest");
+    ui ->comboBox->addItem(QIcon(":/image/admin.png"),"Admin");
+    ui ->comboBox->addItem(QIcon(":/image/user.png"),"User");
+    ui ->comboBox->addItem(QIcon(":/image/guest.png"),"Guest");
     ui->username->setPlaceholderText("Enter Username");
     ui->password->setPlaceholderText("Enter Password");
 }

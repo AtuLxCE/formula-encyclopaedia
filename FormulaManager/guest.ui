@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>893</width>
-    <height>610</height>
+    <width>1280</width>
+    <height>720</height>
    </rect>
   </property>
   <property name="font">
@@ -71,6 +71,31 @@
    </property>
    <property name="scaledContents">
     <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>1180</x>
+     <y>680</y>
+     <width>91</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Tw Cen MT</family>
+     <pointsize>12</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:hover {
+	background-color:rgb(200, 58, 58)
+}</string>
+   </property>
+   <property name="text">
+    <string>Logout</string>
    </property>
   </widget>
  </widget>

@@ -15,6 +15,9 @@ public:
     explicit guest(QWidget *parent = nullptr);
     ~guest();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::guest *ui;
 };

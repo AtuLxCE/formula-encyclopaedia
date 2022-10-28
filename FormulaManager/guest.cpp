@@ -12,3 +12,9 @@ guest::~guest()
 {
     delete ui;
 }
+
+void guest::on_pushButton_clicked()
+{
+    close();
+}
+

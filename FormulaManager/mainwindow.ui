@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>528</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FormulaEncyclopedia</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="image.qrc">
+    <normaloff>:/image/logo.jpg</normaloff>:/image/logo.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget{
+border-image: url(:/image/unknown.jpg);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="4" column="2">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="font">
+       <font>
+        <family>Tw Cen MT</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover {
+	background-color:rgb(200, 58, 58)
+}</string>
+      </property>
+      <property name="text">
+       <string>Exit</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QCommandLinkButton" name="commandLinkButton_5">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QCommandLinkButton" name="commandLinkButton_4">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QPushButton" name="pushButton">
+      <property name="font">
+       <font>
+        <family>Tw Cen MT</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton:hover {
+	background-color: rgb(124, 255, 146);
+}</string>
+      </property>
+      <property name="text">
+       <string>Login</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QCommandLinkButton" name="commandLinkButton_3">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+   <zorder>commandLinkButton_4</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>commandLinkButton_5</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>commandLinkButton_3</zorder>
+  </widget>
+ </widget>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>

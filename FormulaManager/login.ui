@@ -40,9 +40,9 @@ border-image:url(:/image/topPannel.jpg);
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>260</x>
+      <x>330</x>
       <y>40</y>
-      <width>311</width>
+      <width>391</width>
       <height>51</height>
      </rect>
     </property>
@@ -60,7 +60,7 @@ border-image:url(:/image/topPannel.jpg);
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>240</x>
       <y>40</y>
       <width>71</width>
       <height>51</height>

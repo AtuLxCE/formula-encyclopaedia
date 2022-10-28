@@ -10,11 +10,12 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCommandLinkButton>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -23,28 +24,73 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QGridLayout *gridLayout;
+    QPushButton *pushButton_2;
+    QCommandLinkButton *commandLinkButton_5;
+    QCommandLinkButton *commandLinkButton_4;
     QPushButton *pushButton;
-    QMenuBar *menubar;
-    QStatusBar *statusbar;
+    QCommandLinkButton *commandLinkButton_3;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(800, 600);
+        MainWindow->resize(1000, 528);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/image/logo.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        MainWindow->setWindowIcon(icon);
+        MainWindow->setStyleSheet(QString::fromUtf8("#centralwidget{\n"
+"border-image: url(:/image/unknown.jpg);\n"
+"}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
+        gridLayout = new QGridLayout(centralwidget);
+        gridLayout->setObjectName("gridLayout");
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName("pushButton_2");
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Tw Cen MT")});
+        font.setPointSize(12);
+        pushButton_2->setFont(font);
+        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton:hover {\n"
+"	background-color:rgb(200, 58, 58)\n"
+"}"));
+
+        gridLayout->addWidget(pushButton_2, 4, 2, 1, 1);
+
+        commandLinkButton_5 = new QCommandLinkButton(centralwidget);
+        commandLinkButton_5->setObjectName("commandLinkButton_5");
+        commandLinkButton_5->setEnabled(false);
+
+        gridLayout->addWidget(commandLinkButton_5, 2, 4, 1, 1);
+
+        commandLinkButton_4 = new QCommandLinkButton(centralwidget);
+        commandLinkButton_4->setObjectName("commandLinkButton_4");
+        commandLinkButton_4->setEnabled(false);
+
+        gridLayout->addWidget(commandLinkButton_4, 0, 0, 1, 1);
+
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(340, 230, 93, 29));
+        pushButton->setFont(font);
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton:hover {\n"
+"	background-color: rgb(124, 255, 146);\n"
+"}"));
+
+        gridLayout->addWidget(pushButton, 4, 1, 1, 1);
+
+        commandLinkButton_3 = new QCommandLinkButton(centralwidget);
+        commandLinkButton_3->setObjectName("commandLinkButton_3");
+        commandLinkButton_3->setEnabled(false);
+
+        gridLayout->addWidget(commandLinkButton_3, 3, 0, 1, 1);
+
         MainWindow->setCentralWidget(centralwidget);
-        menubar = new QMenuBar(MainWindow);
-        menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 26));
-        MainWindow->setMenuBar(menubar);
-        statusbar = new QStatusBar(MainWindow);
-        statusbar->setObjectName("statusbar");
-        MainWindow->setStatusBar(statusbar);
+        commandLinkButton_4->raise();
+        pushButton_2->raise();
+        commandLinkButton_5->raise();
+        pushButton->raise();
+        commandLinkButton_3->raise();
 
         retranslateUi(MainWindow);
 
@@ -53,8 +99,12 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Try", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "FormulaEncyclopedia", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
+        commandLinkButton_5->setText(QString());
+        commandLinkButton_4->setText(QString());
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
+        commandLinkButton_3->setText(QString());
     } // retranslateUi
 
 };

@@ -1,6 +1,8 @@
 #include "login.h"
 #include "ui_login.h"
-#include "afterlogin.h"
+
+#include "admin.h"
+#include "user.h"
 
 
 Login::Login(QWidget *parent) :
@@ -61,14 +63,17 @@ void Login::on_loginBtn_clicked()
             if (usernameFromDB == username && passwordFromDB == password && typeFromDB == type){
                 if (type == "Admin"){
                     QMessageBox::information(this,"Admin","Logged in as an Admin");
-                    afterLogin afterlogin_obj;
-                    afterlogin_obj.setModal(true);
-                    afterlogin_obj.exec();
+                    admin admin_obj;
+                    admin_obj.setModal(true);
+                    admin_obj.exec();
                     //login for admin
                 }
                 else if (type == "User"){
                     //login for user
                     QMessageBox::information(this,"User","Logged in as an User");
+                    user user_obj;
+                    user_obj.setModal(true);
+                    user_obj.exec();
                 }
                 else {
                     //nothing

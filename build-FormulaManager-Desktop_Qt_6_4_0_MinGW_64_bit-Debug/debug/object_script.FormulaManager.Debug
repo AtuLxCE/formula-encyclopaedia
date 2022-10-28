@@ -1,0 +1,10 @@
+debug/admin.o
+debug/login.o
+debug/main.o
+debug/mainwindow.o
+debug/user.o
+debug/qrc_image.o
+debug/moc_admin.o
+debug/moc_login.o
+debug/moc_mainwindow.o
+debug/moc_user.o

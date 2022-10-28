@@ -10,6 +10,7 @@
 #define UI_GUEST_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
@@ -34,6 +35,9 @@ public:
         font.setPointSize(24);
         font.setBold(true);
         guest->setFont(font);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/image/guest.png"), QSize(), QIcon::Normal, QIcon::Off);
+        guest->setWindowIcon(icon);
         label = new QLabel(guest);
         label->setObjectName("label");
         label->setGeometry(QRect(90, 10, 211, 61));
@@ -58,7 +62,7 @@ public:
 
     void retranslateUi(QDialog *guest)
     {
-        guest->setWindowTitle(QCoreApplication::translate("guest", "Dialog", nullptr));
+        guest->setWindowTitle(QCoreApplication::translate("guest", "Guest", nullptr));
         label->setText(QCoreApplication::translate("guest", "Guest Mode", nullptr));
         label_2->setText(QString());
     } // retranslateUi

@@ -10,6 +10,7 @@
 #define UI_USER_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
@@ -27,6 +28,9 @@ public:
         if (user->objectName().isEmpty())
             user->setObjectName("user");
         user->resize(893, 610);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/image/user.png"), QSize(), QIcon::Normal, QIcon::Off);
+        user->setWindowIcon(icon);
         label = new QLabel(user);
         label->setObjectName("label");
         label->setGeometry(QRect(90, 10, 211, 61));
@@ -48,7 +52,7 @@ public:
 
     void retranslateUi(QDialog *user)
     {
-        user->setWindowTitle(QCoreApplication::translate("user", "Dialog", nullptr));
+        user->setWindowTitle(QCoreApplication::translate("user", "User", nullptr));
         label->setText(QCoreApplication::translate("user", "User Mode", nullptr));
         label_2->setText(QString());
     } // retranslateUi

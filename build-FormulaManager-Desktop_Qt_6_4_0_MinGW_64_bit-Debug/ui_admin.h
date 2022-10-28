@@ -10,6 +10,7 @@
 #define UI_ADMIN_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
@@ -27,6 +28,9 @@ public:
         if (admin->objectName().isEmpty())
             admin->setObjectName("admin");
         admin->resize(893, 610);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/image/admin.png"), QSize(), QIcon::Normal, QIcon::Off);
+        admin->setWindowIcon(icon);
         label = new QLabel(admin);
         label->setObjectName("label");
         label->setGeometry(QRect(20, 10, 61, 61));
@@ -48,7 +52,7 @@ public:
 
     void retranslateUi(QDialog *admin)
     {
-        admin->setWindowTitle(QCoreApplication::translate("admin", "Dialog", nullptr));
+        admin->setWindowTitle(QCoreApplication::translate("admin", "Admin", nullptr));
         label->setText(QString());
         label_2->setText(QCoreApplication::translate("admin", "Admin Mode", nullptr));
     } // retranslateUi

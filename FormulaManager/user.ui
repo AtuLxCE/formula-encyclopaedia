@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>User</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="image.qrc">
+    <normaloff>:/image/user.png</normaloff>:/image/user.png</iconset>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">

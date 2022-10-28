@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
 
@@ -22,12 +23,13 @@ class Ui_user
 public:
     QLabel *label;
     QLabel *label_2;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *user)
     {
         if (user->objectName().isEmpty())
             user->setObjectName("user");
-        user->resize(893, 610);
+        user->resize(1280, 720);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/image/user.png"), QSize(), QIcon::Normal, QIcon::Off);
         user->setWindowIcon(icon);
@@ -44,6 +46,17 @@ public:
         label_2->setGeometry(QRect(20, 10, 61, 61));
         label_2->setPixmap(QPixmap(QString::fromUtf8(":/image/user.png")));
         label_2->setScaledContents(true);
+        pushButton = new QPushButton(user);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(1180, 680, 91, 29));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Bahnschrift Condensed")});
+        font1.setPointSize(12);
+        font1.setBold(false);
+        pushButton->setFont(font1);
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton:hover {\n"
+"	background-color:rgb(200, 58, 58)\n"
+"}"));
 
         retranslateUi(user);
 
@@ -55,6 +68,7 @@ public:
         user->setWindowTitle(QCoreApplication::translate("user", "User", nullptr));
         label->setText(QCoreApplication::translate("user", "User Mode", nullptr));
         label_2->setText(QString());
+        pushButton->setText(QCoreApplication::translate("user", "Log Out", nullptr));
     } // retranslateUi
 
 };

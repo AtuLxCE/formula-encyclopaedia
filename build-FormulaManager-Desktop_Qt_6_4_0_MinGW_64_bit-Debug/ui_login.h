@@ -15,7 +15,6 @@
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGroupBox>
-#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
@@ -28,10 +27,8 @@ class Ui_Login
 {
 public:
     QWidget *topPannel;
-    QWidget *layoutWidget;
-    QHBoxLayout *horizontalLayout;
-    QWidget *logo;
     QLabel *label;
+    QLabel *label_4;
     QGroupBox *groupBox;
     QVBoxLayout *verticalLayout_3;
     QComboBox *comboBox;
@@ -61,30 +58,19 @@ public:
         topPannel->setStyleSheet(QString::fromUtf8("#topPannel {\n"
 "border-image:url(:/image/topPannel.jpg);\n"
 "}"));
-        layoutWidget = new QWidget(topPannel);
-        layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(190, 30, 541, 61));
-        horizontalLayout = new QHBoxLayout(layoutWidget);
-        horizontalLayout->setObjectName("horizontalLayout");
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        logo = new QWidget(layoutWidget);
-        logo->setObjectName("logo");
-        logo->setStyleSheet(QString::fromUtf8("#logo{\n"
-"border-image: url(:/image/logo.jpg)\n"
-"}"));
-
-        horizontalLayout->addWidget(logo);
-
-        label = new QLabel(layoutWidget);
+        label = new QLabel(topPannel);
         label->setObjectName("label");
+        label->setGeometry(QRect(260, 40, 311, 51));
         QFont font;
-        font.setFamilies({QString::fromUtf8("MS Serif")});
+        font.setFamilies({QString::fromUtf8("Agency FB")});
         font.setPointSize(24);
         font.setBold(true);
         label->setFont(font);
-
-        horizontalLayout->addWidget(label);
-
+        label_4 = new QLabel(topPannel);
+        label_4->setObjectName("label_4");
+        label_4->setGeometry(QRect(170, 40, 71, 51));
+        label_4->setPixmap(QPixmap(QString::fromUtf8(":/image/logo.jpg")));
+        label_4->setScaledContents(true);
         groupBox = new QGroupBox(Login);
         groupBox->setObjectName("groupBox");
         groupBox->setGeometry(QRect(320, 170, 248, 296));
@@ -151,7 +137,8 @@ public:
     void retranslateUi(QDialog *Login)
     {
         Login->setWindowTitle(QCoreApplication::translate("Login", "Login", nullptr));
-        label->setText(QCoreApplication::translate("Login", "Formula Encylopedia Login", nullptr));
+        label->setText(QCoreApplication::translate("Login", "Formula Encyclopedia Login", nullptr));
+        label_4->setText(QString());
         groupBox->setTitle(QCoreApplication::translate("Login", "Login", nullptr));
         label_2->setText(QCoreApplication::translate("Login", "Username", nullptr));
         label_3->setText(QCoreApplication::translate("Login", "Password", nullptr));

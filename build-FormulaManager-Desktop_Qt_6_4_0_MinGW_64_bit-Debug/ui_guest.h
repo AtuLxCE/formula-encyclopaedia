@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -24,12 +25,13 @@ public:
     QLabel *label;
     QWidget *widget;
     QLabel *label_2;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *guest)
     {
         if (guest->objectName().isEmpty())
             guest->setObjectName("guest");
-        guest->resize(893, 610);
+        guest->resize(1280, 720);
         QFont font;
         font.setFamilies({QString::fromUtf8("MS Serif")});
         font.setPointSize(24);
@@ -54,6 +56,17 @@ public:
         label_2->setGeometry(QRect(30, 10, 51, 51));
         label_2->setPixmap(QPixmap(QString::fromUtf8(":/image/guest.png")));
         label_2->setScaledContents(true);
+        pushButton = new QPushButton(guest);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(1180, 680, 91, 29));
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("Tw Cen MT")});
+        font2.setPointSize(12);
+        font2.setBold(false);
+        pushButton->setFont(font2);
+        pushButton->setStyleSheet(QString::fromUtf8("QPushButton:hover {\n"
+"	background-color:rgb(200, 58, 58)\n"
+"}"));
 
         retranslateUi(guest);
 
@@ -65,6 +78,7 @@ public:
         guest->setWindowTitle(QCoreApplication::translate("guest", "Guest", nullptr));
         label->setText(QCoreApplication::translate("guest", "Guest Mode", nullptr));
         label_2->setText(QString());
+        pushButton->setText(QCoreApplication::translate("guest", "Logout", nullptr));
     } // retranslateUi
 
 };

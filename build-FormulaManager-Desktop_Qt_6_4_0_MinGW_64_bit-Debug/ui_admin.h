@@ -12,18 +12,34 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QLabel>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_admin
 {
 public:
+    QLabel *label;
+    QLabel *label_2;
 
     void setupUi(QDialog *admin)
     {
         if (admin->objectName().isEmpty())
             admin->setObjectName("admin");
         admin->resize(893, 610);
+        label = new QLabel(admin);
+        label->setObjectName("label");
+        label->setGeometry(QRect(20, 10, 61, 61));
+        label->setPixmap(QPixmap(QString::fromUtf8(":/image/admin.png")));
+        label->setScaledContents(true);
+        label_2 = new QLabel(admin);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(90, 10, 211, 61));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Agency FB")});
+        font.setPointSize(24);
+        font.setBold(true);
+        label_2->setFont(font);
 
         retranslateUi(admin);
 
@@ -33,6 +49,8 @@ public:
     void retranslateUi(QDialog *admin)
     {
         admin->setWindowTitle(QCoreApplication::translate("admin", "Dialog", nullptr));
+        label->setText(QString());
+        label_2->setText(QCoreApplication::translate("admin", "Admin Mode", nullptr));
     } // retranslateUi
 
 };

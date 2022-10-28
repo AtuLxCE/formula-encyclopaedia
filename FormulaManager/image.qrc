@@ -3,6 +3,8 @@
         <file>unknown.jpg</file>
         <file>logo.jpg</file>
         <file>topPannel.jpg</file>
-        <file>admin.jpg</file>
+        <file>../../admin.png</file>
+        <file>../../guest.png</file>
+        <file>../../user.png</file>
     </qresource>
 </RCC>

@@ -12,18 +12,34 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QLabel>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_user
 {
 public:
+    QLabel *label;
+    QLabel *label_2;
 
     void setupUi(QDialog *user)
     {
         if (user->objectName().isEmpty())
             user->setObjectName("user");
-        user->resize(400, 300);
+        user->resize(893, 610);
+        label = new QLabel(user);
+        label->setObjectName("label");
+        label->setGeometry(QRect(90, 10, 211, 61));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Agency FB")});
+        font.setPointSize(24);
+        font.setBold(true);
+        label->setFont(font);
+        label_2 = new QLabel(user);
+        label_2->setObjectName("label_2");
+        label_2->setGeometry(QRect(20, 10, 61, 61));
+        label_2->setPixmap(QPixmap(QString::fromUtf8(":/image/user.png")));
+        label_2->setScaledContents(true);
 
         retranslateUi(user);
 
@@ -33,6 +49,8 @@ public:
     void retranslateUi(QDialog *user)
     {
         user->setWindowTitle(QCoreApplication::translate("user", "Dialog", nullptr));
+        label->setText(QCoreApplication::translate("user", "User Mode", nullptr));
+        label_2->setText(QString());
     } // retranslateUi
 
 };

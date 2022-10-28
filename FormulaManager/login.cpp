@@ -3,7 +3,7 @@
 
 #include "admin.h"
 #include "user.h"
-
+#include "guest.h"
 
 Login::Login(QWidget *parent) :
     QDialog(parent),
@@ -53,6 +53,9 @@ void Login::on_loginBtn_clicked()
         else{
             if (type == "Guest"){
                 QMessageBox::information(this,"Guest","Logged in as a Guest");
+                guest guest_obj;
+                guest_obj.setModal(true);
+                guest_obj.exec();
             }
 
             while (query.next()){

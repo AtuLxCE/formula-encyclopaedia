@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     admin.cpp \
+    guest.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -17,12 +18,14 @@ SOURCES += \
 
 HEADERS += \
     admin.h \
+    guest.h \
     login.h \
     mainwindow.h \
     user.h
 
 FORMS += \
     admin.ui \
+    guest.ui \
     login.ui \
     mainwindow.ui \
     user.ui

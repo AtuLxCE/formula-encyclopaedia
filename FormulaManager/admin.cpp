@@ -60,3 +60,59 @@ void admin::on_pushButton_clicked()
     close();
 }
 
+
+void admin::on_pushButton_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+
+
+
+void admin::on_pushButton_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+
+void admin::on_pushButton_4_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+
+void admin::on_pushButton_8_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+void admin::on_pushButton_11_clicked()
+{
+   ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+void admin::on_pushButton_10_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+void admin::on_pushButton_9_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+void admin::on_loginBtn_3_clicked()
+{
+    QString username = ui->username_3->text();
+    QSqlQuery qry;
+    qry.prepare("delete from credentials where username = (username)"
+                "(:username)");
+    qry.bindValue(":username",username);
+
+    QMessageBox::information(this,"Deleted","Deletion Success");
+}
+

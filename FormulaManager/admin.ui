@@ -111,7 +111,7 @@
        <widget class="QPushButton" name="pushButton_2">
         <property name="font">
          <font>
-          <family>Bahnschrift Condensed</family>
+          <family>Agency FB</family>
           <pointsize>12</pointsize>
           <bold>true</bold>
          </font>
@@ -125,7 +125,7 @@
        <widget class="QPushButton" name="pushButton_3">
         <property name="font">
          <font>
-          <family>Bahnschrift Condensed</family>
+          <family>Agency FB</family>
           <pointsize>12</pointsize>
           <bold>true</bold>
          </font>
@@ -139,7 +139,7 @@
        <widget class="QPushButton" name="pushButton_4">
         <property name="font">
          <font>
-          <family>Bahnschrift Condensed</family>
+          <family>Agency FB</family>
           <pointsize>12</pointsize>
           <bold>true</bold>
          </font>

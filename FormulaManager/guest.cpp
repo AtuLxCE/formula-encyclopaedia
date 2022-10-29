@@ -6,6 +6,7 @@ guest::guest(QWidget *parent) :
     ui(new Ui::guest)
 {
     ui->setupUi(this);
+
 }
 
 guest::~guest()
@@ -16,5 +17,17 @@ guest::~guest()
 void guest::on_pushButton_clicked()
 {
     close();
+}
+
+
+void guest::on_pushButton_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+
+void guest::on_pushButton_10_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
 }
 

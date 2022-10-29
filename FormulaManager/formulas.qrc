@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/formula">
+        <file>photo 1.png</file>
+        <file>photo 2.png</file>
+        <file>photo 3.png</file>
+        <file>photo 4.png</file>
+        <file>photo 5.png</file>
+        <file>photo 6.PNG</file>
+        <file>photo 7.png</file>
+        <file>photo 8.png</file>
+        <file>photo 9.png</file>
+        <file>photo 10.PNG</file>
+        <file>friction.png</file>
+    </qresource>
+</RCC>

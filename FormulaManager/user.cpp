@@ -12,3 +12,9 @@ user::~user()
 {
     delete ui;
 }
+
+void user::on_pushButton_clicked()
+{
+    close();
+}
+

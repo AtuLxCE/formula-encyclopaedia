@@ -6,5 +6,6 @@
         <file>admin.png</file>
         <file>user.png</file>
         <file>guest.png</file>
+        <file>edited_login.png</file>
     </qresource>
 </RCC>

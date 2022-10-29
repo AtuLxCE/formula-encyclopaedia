@@ -21,8 +21,14 @@ public:
     explicit admin(QWidget *parent = nullptr);
     ~admin();
 
+private slots:
+    void on_loginBtn_clicked();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::admin *ui;
+    QSqlDatabase database;
 };
 
 #endif // ADMIN_H

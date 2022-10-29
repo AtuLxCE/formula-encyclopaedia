@@ -15,6 +15,9 @@ public:
     explicit user(QWidget *parent = nullptr);
     ~user();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::user *ui;
 };

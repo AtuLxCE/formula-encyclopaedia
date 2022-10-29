@@ -65,11 +65,11 @@ void Login::on_loginBtn_clicked()
 
             if (usernameFromDB == username && passwordFromDB == password && typeFromDB == type){
                 if (type == "Admin"){
+                    //login for admin
                     QMessageBox::information(this,"Admin","Logged in as an Admin");
                     admin admin_obj;
                     admin_obj.setModal(true);
                     admin_obj.exec();
-                    //login for admin
                 }
                 else if (type == "User"){
                     //login for user
@@ -80,6 +80,7 @@ void Login::on_loginBtn_clicked()
                 }
                 else {
                     //nothing
+                    QMessageBox::information(this,"Fail","Login Failed");
                 }
             }
             else{

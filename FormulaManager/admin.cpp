@@ -78,6 +78,19 @@ void admin::on_pushButton_3_clicked()
 void admin::on_pushButton_4_clicked()
 {
     ui->stackedWidget->setCurrentIndex(3);
+    //connecting to mysql database
+    database = QSqlDatabase::addDatabase("QMYSQL");
+    database.setHostName("localhost");
+    database.setUserName("root");
+    database.setPassword("password");
+    database.setDatabaseName("login");
+
+    if (database.open()){
+        qm = new QSqlQueryModel();
+        qm->setQuery("Select * from credentials");
+        ui->tableView->setModel(qm);
+
+    }
 }
 
 

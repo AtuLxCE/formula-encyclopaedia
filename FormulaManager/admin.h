@@ -45,6 +45,7 @@ private slots:
 private:
     Ui::admin *ui;
     QSqlDatabase database;
+    QSqlQueryModel *qm;
 };
 
 #endif // ADMIN_H

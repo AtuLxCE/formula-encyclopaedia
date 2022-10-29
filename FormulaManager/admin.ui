@@ -87,8 +87,8 @@
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
     <rect>
-     <x>9</x>
-     <y>129</y>
+     <x>50</x>
+     <y>150</y>
      <width>1261</width>
      <height>501</height>
     </rect>
@@ -339,7 +339,7 @@
         </property>
         <property name="styleSheet">
          <string notr="true">QPushButton:hover {
-	background-color: rgb(124, 255, 146);
+	background-color:rgb(200, 58, 58)
 }</string>
         </property>
         <property name="text">
@@ -370,34 +370,21 @@
     </widget>
    </widget>
    <widget class="QWidget" name="page_7">
-    <widget class="QScrollArea" name="scrollArea">
+    <widget class="QTableView" name="tableView">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>20</y>
-       <width>341</width>
-       <height>381</height>
+       <x>290</x>
+       <y>90</y>
+       <width>361</width>
+       <height>21</height>
       </rect>
      </property>
-     <property name="widgetResizable">
-      <bool>true</bool>
-     </property>
-     <widget class="QWidget" name="scrollAreaWidgetContents">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>339</width>
-        <height>379</height>
-       </rect>
-      </property>
-     </widget>
     </widget>
-    <widget class="QPushButton" name="pushButton_11">
+    <widget class="QPushButton" name="pushButton_12">
      <property name="geometry">
       <rect>
-       <x>520</x>
-       <y>410</y>
+       <x>1220</x>
+       <y>190</y>
        <width>121</width>
        <height>29</height>
       </rect>
@@ -410,6 +397,38 @@
      </property>
      <property name="text">
       <string>Go Back</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_11">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>210</y>
+       <width>121</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Agency FB</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Go Back</string>
+     </property>
+    </widget>
+    <widget class="QScrollBar" name="verticalScrollBar">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>90</y>
+       <width>16</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
      </property>
     </widget>
    </widget>

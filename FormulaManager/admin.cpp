@@ -107,12 +107,26 @@ void admin::on_pushButton_9_clicked()
 
 void admin::on_loginBtn_3_clicked()
 {
-    QString username = ui->username_3->text();
-    QSqlQuery qry;
-    qry.prepare("delete from credentials where username = (username)"
-                "(:username)");
-    qry.bindValue(":username",username);
 
-    QMessageBox::information(this,"Deleted","Deletion Success");
+    //connecting to mysql database
+    database = QSqlDatabase::addDatabase("QMYSQL");
+    database.setHostName("localhost");
+    database.setUserName("root");
+    database.setPassword("password");
+    database.setDatabaseName("login");
+
+    if (database.open()){
+        QString username = ui->username_3->text();
+        QSqlQuery qry;
+        qry.prepare("DELETE FROM credentials WHERE username = ?");
+        qry.addBindValue(username);
+
+        if (qry.exec()){
+            QMessageBox::information(this,"Deleted","Deletion Success");
+        }
+        else{
+            QMessageBox::information(this,"Failed","User doesn't exist");
+        }
+     }
 }
 

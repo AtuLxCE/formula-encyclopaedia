@@ -37,4 +37,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     formulas.qrc \
-    image.qrc
+    image.qrc \
+    thumbnails.qrc

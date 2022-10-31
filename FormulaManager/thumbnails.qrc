@@ -1,10 +1,11 @@
 <RCC>
     <qresource prefix="/">
         <file>applied_mech.png</file>
-        <file>chem.png</file>
         <file>em.png</file>
         <file>phy.png</file>
         <file>math.png</file>
+        <file>chem.png</file>
         <file>ect.png</file>
+        <file>ect2.png</file>
     </qresource>
 </RCC>

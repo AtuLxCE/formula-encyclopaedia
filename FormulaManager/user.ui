@@ -56,38 +56,13 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>1180</x>
-     <y>680</y>
-     <width>91</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Bahnschrift Condensed</family>
-     <pointsize>12</pointsize>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton:hover {
-	background-color:rgb(200, 58, 58)
-}</string>
-   </property>
-   <property name="text">
-    <string>Log Out</string>
-   </property>
-  </widget>
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>80</y>
      <width>1271</width>
-     <height>581</height>
+     <height>681</height>
     </rect>
    </property>
    <property name="currentIndex">
@@ -107,21 +82,17 @@
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>70</x>
-       <y>80</y>
-       <width>201</width>
-       <height>231</height>
+       <x>50</x>
+       <y>280</y>
+       <width>211</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
      </property>
      <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="thumbnails.qrc">
-       <normaloff>:/applied_mech.png</normaloff>:/applied_mech.png</iconset>
+      <string>Applied Mechanics</string>
      </property>
      <property name="iconSize">
       <size>
@@ -133,18 +104,14 @@
     <widget class="QPushButton" name="pushButton_3">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>80</y>
-       <width>201</width>
-       <height>231</height>
+       <x>300</x>
+       <y>280</y>
+       <width>211</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="thumbnails.qrc">
-       <normaloff>:/chem.png</normaloff>:/chem.png</iconset>
+      <string>Engineering Chemistry</string>
      </property>
      <property name="iconSize">
       <size>
@@ -157,17 +124,13 @@
      <property name="geometry">
       <rect>
        <x>540</x>
-       <y>80</y>
-       <width>196</width>
-       <height>231</height>
+       <y>280</y>
+       <width>211</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="thumbnails.qrc">
-       <normaloff>:/ect.png</normaloff>:/ect.png</iconset>
+      <string>Electric Circuit Theory</string>
      </property>
      <property name="iconSize">
       <size>
@@ -180,17 +143,13 @@
      <property name="geometry">
       <rect>
        <x>780</x>
-       <y>80</y>
-       <width>201</width>
-       <height>231</height>
+       <y>280</y>
+       <width>211</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="thumbnails.qrc">
-       <normaloff>:/em.png</normaloff>:/em.png</iconset>
+      <string>Electromagnetism</string>
      </property>
      <property name="iconSize">
       <size>
@@ -202,18 +161,14 @@
     <widget class="QPushButton" name="pushButton_6">
      <property name="geometry">
       <rect>
-       <x>70</x>
-       <y>350</y>
-       <width>201</width>
-       <height>231</height>
+       <x>50</x>
+       <y>570</y>
+       <width>211</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="thumbnails.qrc">
-       <normaloff>:/phy.png</normaloff>:/phy.png</iconset>
+      <string>Engineering Physics</string>
      </property>
      <property name="iconSize">
       <size>
@@ -226,23 +181,158 @@
      <property name="geometry">
       <rect>
        <x>1020</x>
-       <y>80</y>
-       <width>201</width>
-       <height>231</height>
+       <y>280</y>
+       <width>211</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset resource="thumbnails.qrc">
-       <normaloff>:/math.png</normaloff>:/math.png</iconset>
+      <string>Engineerig Mathematics</string>
      </property>
      <property name="iconSize">
       <size>
        <width>260</width>
        <height>230</height>
       </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>70</y>
+       <width>211</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="thumbnails.qrc">:/applied_mech_cropped.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>70</y>
+       <width>211</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="thumbnails.qrc">:/chem_cropped.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>70</y>
+       <width>211</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="thumbnails.qrc">:/ect_cropped.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>70</y>
+       <width>211</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="thumbnails.qrc">:/em_cropped.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>1020</x>
+       <y>70</y>
+       <width>211</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="thumbnails.qrc">:/math_cropped.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>360</y>
+       <width>211</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="thumbnails.qrc">:/phy_cropped.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>1160</x>
+       <y>590</y>
+       <width>91</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Condensed</family>
+       <pointsize>12</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton:hover {
+	background-color:rgb(200, 58, 58)
+}</string>
+     </property>
+     <property name="text">
+      <string>Log Out</string>
      </property>
     </widget>
    </widget>

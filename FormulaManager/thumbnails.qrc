@@ -5,7 +5,11 @@
         <file>phy.png</file>
         <file>math.png</file>
         <file>chem.png</file>
-        <file>ect.png</file>
-        <file>ect2.png</file>
+        <file>applied_mech_cropped.png</file>
+        <file>chem_cropped.png</file>
+        <file>em_cropped.png</file>
+        <file>math_cropped.png</file>
+        <file>phy_cropped.png</file>
+        <file>ect_cropped.png</file>
     </qresource>
 </RCC>

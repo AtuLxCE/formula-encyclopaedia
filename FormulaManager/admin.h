@@ -2,7 +2,6 @@
 #define ADMIN_H
 
 #include <QDialog>
-#include <QDialog>
 #include <QMainWindow>
 #include <QtSql>
 #include <QSqlDatabase>

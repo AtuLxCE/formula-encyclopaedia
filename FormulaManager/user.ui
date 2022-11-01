@@ -356,6 +356,16 @@
       <string>Go Back</string>
      </property>
     </widget>
+    <widget class="QListWidget" name="listWidget">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>31</y>
+       <width>1251</width>
+       <height>511</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="subject_chem">
     <widget class="QPushButton" name="pushButton_10">

@@ -2,6 +2,11 @@
 #define USER_H
 
 #include <QDialog>
+#include <QMainWindow>
+#include <QtSql>
+#include <QSqlDatabase>
+#include<QMessageBox>
+#include <QStackedWidget>
 
 namespace Ui {
 class user;
@@ -44,6 +49,8 @@ private slots:
 
 private:
     Ui::user *ui;
+    QSqlDatabase database;
+    QSqlQueryModel *qm;
 };
 
 #endif // USER_H

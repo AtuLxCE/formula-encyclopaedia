@@ -5,7 +5,21 @@ user::user(QWidget *parent) : QDialog(parent),
                               ui(new Ui::user)
 {
     ui->setupUi(this);
-//    ui->stackedWidget->setCurrentIndex(1);
+}
+
+user::~user()
+{
+    delete ui;
+}
+
+void user::on_pushButton_clicked()
+{
+    close();
+}
+
+void user::on_pushButton_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
     // connecting to mysql database
     database = QSqlDatabase::addDatabase("QMYSQL");
     database.setHostName("localhost");
@@ -35,28 +49,11 @@ user::user(QWidget *parent) : QDialog(parent),
             {
                 QString nameFromDB = qry.value(0).toString();
                 QString pathFromDB = qry.value(1).toString();
-
-                QStringList fileName = QFileDialog::getOpenFileNames(this,tr("Open Image"),
-                                           "C:\\Users\\atuls\\OneDrive\\Desktop\\project\\formula-encyclopaedia\\formulas\\Applied Mech",
-                                           tr("Image Files(*.png)"));
-                iterator = new QStringListIterator(fileName);
-                label = new QLabel;
-
-
-
-                if(iterator->hasNext())
-                {
-                    label->clear();
-                    label->setPixmap(QPixmap(iterator->next()));
-
-                    // need to add a scroll area widget in your ui file
-                    // and set layout to it (horizontal, vertical, grid etc.)
-                }
-//                ui->listWidget->setViewMode(QListWidget::IconMode);
-//                ui->listWidget->setIconSize(QSize(500, 500));
-//                ui->listWidget->setResizeMode(QListWidget::Adjust);
-//                QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
-//                ui->listWidget->addItem(item);
+                ui->listWidget->setViewMode(QListWidget::IconMode);
+                ui->listWidget->setIconSize(QSize(500, 500));
+                ui->listWidget->setResizeMode(QListWidget::Adjust);
+                QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
+                ui->listWidget->addItem(item);
             }
         }
     }
@@ -68,294 +65,279 @@ user::user(QWidget *parent) : QDialog(parent),
     database.close();
 }
 
-
-user::~user()
+void user::on_pushButton_3_clicked()
 {
-    delete ui;
+    ui->stackedWidget->setCurrentIndex(2);
+    // connecting to mysql database
+    database = QSqlDatabase::addDatabase("QMYSQL");
+    database.setHostName("localhost");
+    database.setUserName("root");
+    database.setPassword("password");
+    database.setDatabaseName("formula");
+
+    if (database.open())
+    {
+        // Retrieve Data from input fields
+        QString name;
+        QString path;
+
+        // Run our insert Query
+        QSqlQuery qry;
+
+        qry.prepare("select * from chemistry");
+
+        if (!qry.exec())
+        {
+            QMessageBox::information(this, "Chemistry", "Query Failed To  Execute");
+        }
+        else
+        {
+
+            while (qry.next())
+            {
+                QString nameFromDB = qry.value(0).toString();
+                QString pathFromDB = qry.value(1).toString();
+                ui->listWidget_2->setViewMode(QListWidget::IconMode);
+                ui->listWidget_2->setIconSize(QSize(500, 500));
+                ui->listWidget_2->setResizeMode(QListWidget::Adjust);
+                QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
+                ui->listWidget_2->addItem(item);
+            }
+        }
+    }
+
+    else
+    {
+        QMessageBox::information(this, "Not Connected", "Database is not connected");
+    }
+    database.close();
+
 }
 
-//void user::on_pushButton_clicked()
-//{
-//    close();
-//}
+void user::on_pushButton_4_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+    // connecting to mysql database
+    database = QSqlDatabase::addDatabase("QMYSQL");
+    database.setHostName("localhost");
+    database.setUserName("root");
+    database.setPassword("password");
+    database.setDatabaseName("formula");
 
-//void user::on_pushButton_2_clicked()
-//{
-//}
+    if (database.open())
+    {
+        // Retrieve Data from input fields
+        QString name;
+        QString path;
 
-//void user::on_pushButton_3_clicked()
-//{
-//    ui->stackedWidget->setCurrentIndex(2);
-//    // connecting to mysql database
-//    database = QSqlDatabase::addDatabase("QMYSQL");
-//    database.setHostName("localhost");
-//    database.setUserName("root");
-//    database.setPassword("password");
-//    database.setDatabaseName("formula");
+        // Run our insert Query
+        QSqlQuery qry;
 
-//    if (database.open())
-//    {
-//        // Retrieve Data from input fields
-//        QString name;
-//        QString path;
+        qry.prepare("select * from ECT");
 
-//        // Run our insert Query
-//        QSqlQuery qry;
+        if (!qry.exec())
+        {
+            QMessageBox::information(this, "ECT", "Query Failed To  Execute");
+        }
+        else
+        {
 
-//        qry.prepare("select * from chemistry");
+            while (qry.next())
+            {
+                QString nameFromDB = qry.value(0).toString();
+                QString pathFromDB = qry.value(1).toString();
+                ui->listWidget_3->setViewMode(QListWidget::IconMode);
+                ui->listWidget_3->setIconSize(QSize(500, 500));
+                ui->listWidget_3->setResizeMode(QListWidget::Adjust);
+                QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
+                ui->listWidget_3->addItem(item);
+            }
+        }
+    }
 
-//        if (!qry.exec())
-//        {
-//            QMessageBox::information(this, "Chemistry", "Query Failed To  Execute");
-//        }
-//        else
-//        {
+    else
+    {
+        QMessageBox::information(this, "Not Connected", "Database is not connected");
+    }
+    database.close();
+}
 
-//            while (qry.next())
-//            {
-//                QString nameFromDB = qry.value(0).toString();
-//                QString pathFromDB = qry.value(1).toString();
-//                ui->listWidget_2->setViewMode(QListWidget::IconMode);
-//                ui->listWidget_2->setIconSize(QSize(500, 500));
-//                ui->listWidget_2->setResizeMode(QListWidget::Adjust);
-//                QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
-//                ui->listWidget_2->addItem(item);
-//            }
-//        }
-//    }
+void user::on_pushButton_5_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+    // connecting to mysql database
+    database = QSqlDatabase::addDatabase("QMYSQL");
+    database.setHostName("localhost");
+    database.setUserName("root");
+    database.setPassword("password");
+    database.setDatabaseName("formula");
 
-//    else
-//    {
-//        QMessageBox::information(this, "Not Connected", "Database is not connected");
-//    }
-//    database.close();
+    if (database.open())
+    {
+        // Retrieve Data from input fields
+        QString name;
+        QString path;
 
-//}
+        // Run our insert Query
+        QSqlQuery qry;
 
-//void user::on_pushButton_4_clicked()
-//{
-//    ui->stackedWidget->setCurrentIndex(3);
-//    // connecting to mysql database
-//    database = QSqlDatabase::addDatabase("QMYSQL");
-//    database.setHostName("localhost");
-//    database.setUserName("root");
-//    database.setPassword("password");
-//    database.setDatabaseName("formula");
+        qry.prepare("select * from EM");
 
-//    if (database.open())
-//    {
-//        // Retrieve Data from input fields
-//        QString name;
-//        QString path;
+        if (!qry.exec())
+        {
+            QMessageBox::information(this, "EM", "Query Failed To  Execute");
+        }
+        else
+        {
 
-//        // Run our insert Query
-//        QSqlQuery qry;
+            while (qry.next())
+            {
+                QString nameFromDB = qry.value(0).toString();
+                QString pathFromDB = qry.value(1).toString();
+                ui->listWidget_4->setViewMode(QListWidget::IconMode);
+                ui->listWidget_4->setIconSize(QSize(500, 500));
+                ui->listWidget_4->setResizeMode(QListWidget::Adjust);
+                QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
+                ui->listWidget_4->addItem(item);
+            }
+        }
+    }
 
-//        qry.prepare("select * from ECT");
+    else
+    {
+        QMessageBox::information(this, "Not Connected", "Database is not connected");
+    }
+    database.close();
+}
 
-//        if (!qry.exec())
-//        {
-//            QMessageBox::information(this, "ECT", "Query Failed To  Execute");
-//        }
-//        else
-//        {
+void user::on_pushButton_8_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+    // connecting to mysql database
+    database = QSqlDatabase::addDatabase("QMYSQL");
+    database.setHostName("localhost");
+    database.setUserName("root");
+    database.setPassword("password");
+    database.setDatabaseName("formula");
 
-//            while (qry.next())
-//            {
-//                QString nameFromDB = qry.value(0).toString();
-//                QString pathFromDB = qry.value(1).toString();
-//                ui->listWidget_3->setViewMode(QListWidget::IconMode);
-//                ui->listWidget_3->setIconSize(QSize(500, 500));
-//                ui->listWidget_3->setResizeMode(QListWidget::Adjust);
-//                QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
-//                ui->listWidget_3->addItem(item);
-//            }
-//        }
-//    }
+    if (database.open())
+    {
+        // Retrieve Data from input fields
+        QString name;
+        QString path;
 
-//    else
-//    {
-//        QMessageBox::information(this, "Not Connected", "Database is not connected");
-//    }
-//    database.close();
-//}
+        // Run our insert Query
+        QSqlQuery qry;
 
-//void user::on_pushButton_5_clicked()
-//{
-//    ui->stackedWidget->setCurrentIndex(4);
-//    // connecting to mysql database
-//    database = QSqlDatabase::addDatabase("QMYSQL");
-//    database.setHostName("localhost");
-//    database.setUserName("root");
-//    database.setPassword("password");
-//    database.setDatabaseName("formula");
+        qry.prepare("select * from math");
 
-//    if (database.open())
-//    {
-//        // Retrieve Data from input fields
-//        QString name;
-//        QString path;
+        if (!qry.exec())
+        {
+            QMessageBox::information(this, "Math", "Query Failed To  Execute");
+        }
+        else
+        {
 
-//        // Run our insert Query
-//        QSqlQuery qry;
+            while (qry.next())
+            {
+                QString nameFromDB = qry.value(0).toString();
+                QString pathFromDB = qry.value(1).toString();
+                ui->listWidget_5->setViewMode(QListWidget::IconMode);
+                ui->listWidget_5->setIconSize(QSize(500, 500));
+                ui->listWidget_5->setResizeMode(QListWidget::Adjust);
+                QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
+                ui->listWidget_5->addItem(item);
+            }
+        }
+    }
 
-//        qry.prepare("select * from EM");
+    else
+    {
+        QMessageBox::information(this, "Not Connected", "Database is not connected");
+    }
+    database.close();
+}
 
-//        if (!qry.exec())
-//        {
-//            QMessageBox::information(this, "EM", "Query Failed To  Execute");
-//        }
-//        else
-//        {
+void user::on_pushButton_6_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(6);
+    // connecting to mysql database
+    database = QSqlDatabase::addDatabase("QMYSQL");
+    database.setHostName("localhost");
+    database.setUserName("root");
+    database.setPassword("password");
+    database.setDatabaseName("formula");
 
-//            while (qry.next())
-//            {
-//                QString nameFromDB = qry.value(0).toString();
-//                QString pathFromDB = qry.value(1).toString();
-//                ui->listWidget_4->setViewMode(QListWidget::IconMode);
-//                ui->listWidget_4->setIconSize(QSize(500, 500));
-//                ui->listWidget_4->setResizeMode(QListWidget::Adjust);
-//                QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
-//                ui->listWidget_4->addItem(item);
-//            }
-//        }
-//    }
+    if (database.open())
+    {
+        // Retrieve Data from input fields
+        QString name;
+        QString path;
 
-//    else
-//    {
-//        QMessageBox::information(this, "Not Connected", "Database is not connected");
-//    }
-//    database.close();
-//}
+        // Run our insert Query
+        QSqlQuery qry;
 
-//void user::on_pushButton_8_clicked()
-//{
-//    ui->stackedWidget->setCurrentIndex(5);
-//    // connecting to mysql database
-//    database = QSqlDatabase::addDatabase("QMYSQL");
-//    database.setHostName("localhost");
-//    database.setUserName("root");
-//    database.setPassword("password");
-//    database.setDatabaseName("formula");
+        qry.prepare("select * from physics");
 
-//    if (database.open())
-//    {
-//        // Retrieve Data from input fields
-//        QString name;
-//        QString path;
+        if (!qry.exec())
+        {
+            QMessageBox::information(this, "Physics", "Query Failed To  Execute");
+        }
+        else
+        {
 
-//        // Run our insert Query
-//        QSqlQuery qry;
+            while (qry.next())
+            {
+                QString nameFromDB = qry.value(0).toString();
+                QString pathFromDB = qry.value(1).toString();
+                ui->listWidget_6->setViewMode(QListWidget::IconMode);
+                ui->listWidget_6->setIconSize(QSize(500, 500));
+                ui->listWidget_6->setResizeMode(QListWidget::Adjust);
+                QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
+                ui->listWidget_6->addItem(item);
+            }
+        }
+    }
 
-//        qry.prepare("select * from math");
+    else
+    {
+        QMessageBox::information(this, "Not Connected", "Database is not connected");
+    }
+    database.close();
+}
 
-//        if (!qry.exec())
-//        {
-//            QMessageBox::information(this, "Math", "Query Failed To  Execute");
-//        }
-//        else
-//        {
+void user::on_pushButton_9_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+    database.close();
+}
 
-//            while (qry.next())
-//            {
-//                QString nameFromDB = qry.value(0).toString();
-//                QString pathFromDB = qry.value(1).toString();
-//                ui->listWidget_5->setViewMode(QListWidget::IconMode);
-//                ui->listWidget_5->setIconSize(QSize(500, 500));
-//                ui->listWidget_5->setResizeMode(QListWidget::Adjust);
-//                QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
-//                ui->listWidget_5->addItem(item);
-//            }
-//        }
-//    }
+void user::on_pushButton_10_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+    database.close();
+}
 
-//    else
-//    {
-//        QMessageBox::information(this, "Not Connected", "Database is not connected");
-//    }
-//    database.close();
-//}
+void user::on_pushButton_11_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+    database.close();
+}
 
-//void user::on_pushButton_6_clicked()
-//{
-//    ui->stackedWidget->setCurrentIndex(6);
-//    // connecting to mysql database
-//    database = QSqlDatabase::addDatabase("QMYSQL");
-//    database.setHostName("localhost");
-//    database.setUserName("root");
-//    database.setPassword("password");
-//    database.setDatabaseName("formula");
+void user::on_pushButton_12_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+    database.close();
+}
 
-//    if (database.open())
-//    {
-//        // Retrieve Data from input fields
-//        QString name;
-//        QString path;
+void user::on_pushButton_13_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+    database.close();
+}
 
-//        // Run our insert Query
-//        QSqlQuery qry;
-
-//        qry.prepare("select * from physics");
-
-//        if (!qry.exec())
-//        {
-//            QMessageBox::information(this, "Physics", "Query Failed To  Execute");
-//        }
-//        else
-//        {
-
-//            while (qry.next())
-//            {
-//                QString nameFromDB = qry.value(0).toString();
-//                QString pathFromDB = qry.value(1).toString();
-//                ui->listWidget_6->setViewMode(QListWidget::IconMode);
-//                ui->listWidget_6->setIconSize(QSize(500, 500));
-//                ui->listWidget_6->setResizeMode(QListWidget::Adjust);
-//                QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
-//                ui->listWidget_6->addItem(item);
-//            }
-//        }
-//    }
-
-//    else
-//    {
-//        QMessageBox::information(this, "Not Connected", "Database is not connected");
-//    }
-//    database.close();
-//}
-
-//void user::on_pushButton_9_clicked()
-//{
-//    ui->stackedWidget->setCurrentIndex(0);
-//    database.close();
-//}
-
-//void user::on_pushButton_10_clicked()
-//{
-//    ui->stackedWidget->setCurrentIndex(0);
-//    database.close();
-//}
-
-//void user::on_pushButton_11_clicked()
-//{
-//    ui->stackedWidget->setCurrentIndex(0);
-//    database.close();
-//}
-
-//void user::on_pushButton_12_clicked()
-//{
-//    ui->stackedWidget->setCurrentIndex(0);
-//    database.close();
-//}
-
-//void user::on_pushButton_13_clicked()
-//{
-//    ui->stackedWidget->setCurrentIndex(0);
-//    database.close();
-//}
-
-//void user::on_pushButton_14_clicked()
-//{
-//    ui->stackedWidget->setCurrentIndex(0);
-//    database.close();
-//}
+void user::on_pushButton_14_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+    database.close();
+}

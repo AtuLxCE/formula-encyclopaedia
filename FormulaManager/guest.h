@@ -3,8 +3,9 @@
 
 #include <QDialog>
 
-namespace Ui {
-class guest;
+namespace Ui
+{
+    class guest;
 }
 
 class guest : public QDialog

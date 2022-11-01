@@ -387,6 +387,16 @@
       <string>Go Back</string>
      </property>
     </widget>
+    <widget class="QListWidget" name="listWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>1251</width>
+       <height>511</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="subject_ect">
     <widget class="QPushButton" name="pushButton_11">
@@ -406,6 +416,16 @@
      </property>
      <property name="text">
       <string>Go Back</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="listWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>1251</width>
+       <height>511</height>
+      </rect>
      </property>
     </widget>
    </widget>
@@ -429,6 +449,16 @@
       <string>Go Back</string>
      </property>
     </widget>
+    <widget class="QListWidget" name="listWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>1251</width>
+       <height>511</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="subject_math">
     <widget class="QPushButton" name="pushButton_13">
@@ -450,6 +480,16 @@
       <string>Go Back</string>
      </property>
     </widget>
+    <widget class="QListWidget" name="listWidget_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>1251</width>
+       <height>511</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="subject_phy">
     <widget class="QPushButton" name="pushButton_14">
@@ -469,6 +509,16 @@
      </property>
      <property name="text">
       <string>Go Back</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="listWidget_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>1251</width>
+       <height>511</height>
+      </rect>
      </property>
     </widget>
    </widget>

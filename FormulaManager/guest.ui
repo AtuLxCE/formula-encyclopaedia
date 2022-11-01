@@ -108,14 +108,14 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>510</x>
-       <y>120</y>
+       <x>490</x>
+       <y>220</y>
        <width>211</width>
        <height>51</height>
       </rect>
@@ -153,165 +153,183 @@
       <string>Go Back</string>
      </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>380</x>
-       <y>10</y>
-       <width>371</width>
-       <height>421</height>
+       <x>410</x>
+       <y>0</y>
+       <width>379</width>
+       <height>139</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <item>
-       <widget class="QLabel" name="label_9">
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="formulas.qrc">:/formula/photo 5.png</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_4">
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="formulas.qrc">:/formula/photo 10.PNG</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_10">
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="formulas.qrc">:/formula/photo 6.PNG</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="formulas.qrc">:/formula/photo 5.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>770</x>
-       <y>10</y>
-       <width>361</width>
-       <height>421</height>
+       <x>410</x>
+       <y>300</y>
+       <width>379</width>
+       <height>139</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_3">
-      <item>
-       <widget class="QLabel" name="label_7">
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="formulas.qrc">:/formula/photo 3.png</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_11">
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="formulas.qrc">:/formula/photo 7.png</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_12">
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="formulas.qrc">:/formula/photo 8.png</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="formulas.qrc">:/formula/photo 6.PNG</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
     </widget>
-    <widget class="QWidget" name="">
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>410</x>
+       <y>150</y>
+       <width>379</width>
+       <height>139</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="formulas.qrc">:/formula/photo 10.PNG</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>810</x>
+       <y>0</y>
+       <width>379</width>
+       <height>139</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="formulas.qrc">:/formula/photo 3.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>810</x>
+       <y>300</y>
+       <width>379</width>
+       <height>139</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="formulas.qrc">:/formula/photo 8.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>810</x>
+       <y>150</y>
+       <width>379</width>
+       <height>139</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="formulas.qrc">:/formula/Schrodinger time dependent in one dimension.PNG</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
        <x>11</x>
-       <y>11</y>
-       <width>351</width>
-       <height>421</height>
+       <y>293</y>
+       <width>379</width>
+       <height>139</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QLabel" name="label_5">
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="formulas.qrc">:/formula/photo 2.png</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_6">
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="formulas.qrc">:/formula/photo 4.png</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="formulas.qrc">:/formula/friction.png</pixmap>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="formulas.qrc">:/formula/friction.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>1</y>
+       <width>379</width>
+       <height>139</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="formulas.qrc">:/formula/photo 2.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>147</y>
+       <width>379</width>
+       <height>139</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="formulas.qrc">:/formula/Self Inductance of toroid.PNG</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
     </widget>
    </widget>
   </widget>
  </widget>
  <resources>
-  <include location="image.qrc"/>
   <include location="formulas.qrc"/>
+  <include location="image.qrc"/>
  </resources>
  <connections/>
 </ui>

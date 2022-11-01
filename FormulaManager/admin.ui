@@ -94,7 +94,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QWidget" name="layoutWidget">
@@ -378,25 +378,6 @@
        <width>361</width>
        <height>21</height>
       </rect>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_12">
-     <property name="geometry">
-      <rect>
-       <x>1220</x>
-       <y>190</y>
-       <width>121</width>
-       <height>29</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Agency FB</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>Go Back</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_11">

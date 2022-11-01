@@ -5,11 +5,12 @@
 #include <QMainWindow>
 #include <QtSql>
 #include <QSqlDatabase>
-#include<QMessageBox>
+#include <QMessageBox>
 #include <QStackedWidget>
 
-namespace Ui {
-class Login;
+namespace Ui
+{
+    class Login;
 }
 
 class Login : public QDialog

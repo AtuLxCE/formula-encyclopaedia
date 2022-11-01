@@ -5,11 +5,12 @@
 #include <QMainWindow>
 #include <QtSql>
 #include <QSqlDatabase>
-#include<QMessageBox>
+#include <QMessageBox>
 #include <QStackedWidget>
 
-namespace Ui {
-class admin;
+namespace Ui
+{
+    class admin;
 }
 
 class admin : public QDialog

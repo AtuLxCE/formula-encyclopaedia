@@ -54,6 +54,7 @@ void user::on_pushButton_2_clicked()
                 ui->listWidget->setResizeMode(QListWidget::Adjust);
                 QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
                 ui->listWidget->addItem(item);
+                ui->listWidget->setDragDropMode(QAbstractItemView::NoDragDrop);
             }
         }
     }
@@ -102,6 +103,7 @@ void user::on_pushButton_3_clicked()
                 ui->listWidget_2->setResizeMode(QListWidget::Adjust);
                 QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
                 ui->listWidget_2->addItem(item);
+                ui->listWidget_2->setDragDropMode(QAbstractItemView::NoDragDrop);
             }
         }
     }
@@ -151,6 +153,7 @@ void user::on_pushButton_4_clicked()
                 ui->listWidget_3->setResizeMode(QListWidget::Adjust);
                 QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
                 ui->listWidget_3->addItem(item);
+                ui->listWidget_3->setDragDropMode(QAbstractItemView::NoDragDrop);
             }
         }
     }
@@ -199,6 +202,7 @@ void user::on_pushButton_5_clicked()
                 ui->listWidget_4->setResizeMode(QListWidget::Adjust);
                 QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
                 ui->listWidget_4->addItem(item);
+                ui->listWidget_4->setDragDropMode(QAbstractItemView::NoDragDrop);
             }
         }
     }
@@ -247,6 +251,7 @@ void user::on_pushButton_8_clicked()
                 ui->listWidget_5->setResizeMode(QListWidget::Adjust);
                 QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
                 ui->listWidget_5->addItem(item);
+                ui->listWidget_5->setDragDropMode(QAbstractItemView::NoDragDrop);
             }
         }
     }
@@ -295,6 +300,7 @@ void user::on_pushButton_6_clicked()
                 ui->listWidget_6->setResizeMode(QListWidget::Adjust);
                 QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
                 ui->listWidget_6->addItem(item);
+                ui->listWidget_6->setDragDropMode(QAbstractItemView::NoDragDrop);
             }
         }
     }

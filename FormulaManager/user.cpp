@@ -49,6 +49,7 @@ void user::on_pushButton_2_clicked()
             {
                 QString nameFromDB = qry.value(0).toString();
                 QString pathFromDB = qry.value(1).toString();
+                ui->listWidget->setDragDropMode(QAbstractItemView::NoDragDrop);
                 ui->listWidget->setViewMode(QListWidget::IconMode);
                 ui->listWidget->setIconSize(QSize(500, 500));
                 ui->listWidget->setResizeMode(QListWidget::Adjust);

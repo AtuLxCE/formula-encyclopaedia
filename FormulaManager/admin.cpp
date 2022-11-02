@@ -81,12 +81,25 @@ void admin::on_pushButton_4_clicked()
     database.setPassword("password");
     database.setDatabaseName("login");
 
-    if (database.open())
-    {
-        qm = new QSqlQueryModel();
-        qm->setQuery("Select * from credentials");
-        ui->tableView->setModel(qm);
-    }
+//    if (database.open())
+//    {
+
+//        QSqlQuery query(QSqlDatabase::database("MyConnect"));
+//        query.prepare(QString("Select * from credentials where username = :username"));
+
+//        while (query.next())
+//        {
+////            QString usernameFromDB = query.value(0).toString();                ui->listWidget->setViewMode(QListWidget::IconMode);
+////            ui->listWidget->setIconSize(QSize(500, 500));
+////            ui->listWidget->setResizeMode(QListWidget::Adjust);
+////            QListWidgetItem *item = QString(usernameFromDB);
+////            ui->listWidget->addItem(item);
+//        }
+//    }
+//        qm = new QSqlQueryModel();
+//        qm->setQuery("Select * from credentials");
+//        ui->tableView->setModel(qm);
+////    }
 }
 
 void admin::on_pushButton_8_clicked()

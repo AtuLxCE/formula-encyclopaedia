@@ -94,7 +94,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>3</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QWidget" name="layoutWidget">
@@ -370,21 +370,11 @@
     </widget>
    </widget>
    <widget class="QWidget" name="page_7">
-    <widget class="QTableView" name="tableView">
-     <property name="geometry">
-      <rect>
-       <x>290</x>
-       <y>90</y>
-       <width>361</width>
-       <height>21</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QPushButton" name="pushButton_11">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>210</y>
+       <x>550</x>
+       <y>450</y>
        <width>121</width>
        <height>29</height>
       </rect>
@@ -399,20 +389,17 @@
       <string>Go Back</string>
      </property>
     </widget>
-    <widget class="QScrollBar" name="verticalScrollBar">
-     <property name="geometry">
-      <rect>
-       <x>640</x>
-       <y>90</y>
-       <width>16</width>
-       <height>160</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-    </widget>
    </widget>
+  </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>120</y>
+     <width>1101</width>
+     <height>441</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources>

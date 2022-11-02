@@ -94,9 +94,9 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>3</number>
    </property>
-   <widget class="QWidget" name="page">
+   <widget class="QWidget" name="main_menu">
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
@@ -152,7 +152,7 @@
      </layout>
     </widget>
    </widget>
-   <widget class="QWidget" name="page_3">
+   <widget class="QWidget" name="user_regirstration">
     <widget class="QGroupBox" name="groupBox">
      <property name="geometry">
       <rect>
@@ -278,7 +278,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="page_2">
+   <widget class="QWidget" name="delete_user">
     <widget class="QGroupBox" name="groupBox_7">
      <property name="geometry">
       <rect>
@@ -369,22 +369,22 @@
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="page_7">
+   <widget class="QWidget" name="user_list">
     <widget class="QTableView" name="tableView">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>90</y>
-       <width>361</width>
-       <height>21</height>
+       <x>500</x>
+       <y>120</y>
+       <width>261</width>
+       <height>301</height>
       </rect>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_11">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>210</y>
+       <x>570</x>
+       <y>450</y>
        <width>121</width>
        <height>29</height>
       </rect>
@@ -397,19 +397,6 @@
      </property>
      <property name="text">
       <string>Go Back</string>
-     </property>
-    </widget>
-    <widget class="QScrollBar" name="verticalScrollBar">
-     <property name="geometry">
-      <rect>
-       <x>640</x>
-       <y>90</y>
-       <width>16</width>
-       <height>160</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
      </property>
     </widget>
    </widget>

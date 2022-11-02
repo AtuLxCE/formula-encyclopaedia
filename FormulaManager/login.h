@@ -27,6 +27,8 @@ private slots:
 private:
     Ui::Login *ui;
     QSqlDatabase database;
+    QString name = "admin";
+    QString pass = "abny</>2077";
 };
 
 #endif // LOGIN_H

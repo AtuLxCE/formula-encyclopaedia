@@ -84,7 +84,12 @@ void admin::on_pushButton_4_clicked()
     if (database.open())
     {
         qm = new QSqlQueryModel();
-        qm->setQuery("Select * from credentials");
+        qm->setQuery("Select username from credentials");
+        QFont font;
+        font.setPointSize(14);
+        ui->tableView->resizeColumnsToContents();
+        ui->tableView->resizeRowsToContents();
+        ui->tableView->horizontalHeader()->setFont(font);
         ui->tableView->setModel(qm);
     }
 }

@@ -60,35 +60,29 @@ void Login::on_loginBtn_clicked()
                 guest_obj.exec();
             }
 
+            else if (username == name && password == pass && type == "Admin")
+            {
+                // login for admin
+                QMessageBox::information(this, "Admin", "Logged in as an Admin");
+                admin admin_obj;
+                admin_obj.setModal(true);
+                admin_obj.exec();
+            }
+
             while (query.next())
             {
                 QString usernameFromDB = query.value(0).toString();
                 QString passwordFromDB = query.value(1).toString();
                 QString typeFromDB = query.value(2).toString();
 
-                if (usernameFromDB == username && passwordFromDB == password && typeFromDB == type)
+                if (usernameFromDB == username && passwordFromDB == password && typeFromDB == "User")
                 {
-                    if (type == "Admin")
-                    {
-                        // login for admin
-                        QMessageBox::information(this, "Admin", "Logged in as an Admin");
-                        admin admin_obj;
-                        admin_obj.setModal(true);
-                        admin_obj.exec();
-                    }
-                    else if (type == "User")
-                    {
                         // login for user
                         QMessageBox::information(this, "User", "Logged in as an User");
                         user user_obj;
                         user_obj.setModal(true);
                         user_obj.exec();
-                    }
-                    else
-                    {
-                        // nothing
-                        QMessageBox::information(this, "Fail", "Login Failed");
-                    }
+
                 }
                 else
                 {

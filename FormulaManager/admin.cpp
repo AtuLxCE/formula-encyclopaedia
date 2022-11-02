@@ -17,6 +17,8 @@ admin::~admin()
 
 void admin::on_loginBtn_clicked()
 {
+    ui->username->clear();
+    ui->password->clear();
     // connecting to mysql database
     database = QSqlDatabase::addDatabase("QMYSQL");
     database.setHostName("localhost");
@@ -85,12 +87,12 @@ void admin::on_pushButton_4_clicked()
     {
         qm = new QSqlQueryModel();
         qm->setQuery("Select username from credentials");
-        QFont font;
-        font.setPointSize(14);
-        ui->tableView->resizeColumnsToContents();
-        ui->tableView->resizeRowsToContents();
-        ui->tableView->horizontalHeader()->setFont(font);
+        QFont font ("Agency FB", 12);
+        QFont serifFont("Agency FB", 16, QFont::Bold);
         ui->tableView->setModel(qm);
+        ui->tableView->horizontalHeader()->setFont(serifFont);
+        ui->tableView->setFont(font);
+        ui->tableView->resizeColumnsToContents();
     }
 }
 
@@ -116,7 +118,7 @@ void admin::on_pushButton_9_clicked()
 
 void admin::on_loginBtn_3_clicked()
 {
-
+    ui->username_3->clear();
     // connecting to mysql database
     database = QSqlDatabase::addDatabase("QMYSQL");
     database.setHostName("localhost");

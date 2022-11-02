@@ -84,10 +84,10 @@ void Login::on_loginBtn_clicked()
                         user_obj.exec();
 
                 }
-                else
+                /*else
                 {
                     QMessageBox::information(this, "Fail", "Login Failed");
-                }
+                }*/
             }
         }
     }

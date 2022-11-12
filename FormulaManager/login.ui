@@ -10,6 +10,11 @@
     <height>610</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Segoe Script</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Login</string>
   </property>
@@ -88,7 +93,7 @@ border-image:url(:/image/topPannel.jpg);
    </property>
    <property name="font">
     <font>
-     <family>Agency FB</family>
+     <family>Bahnschrift Light Condensed</family>
      <pointsize>20</pointsize>
      <bold>true</bold>
     </font>
@@ -114,7 +119,7 @@ border-image:url(:/image/topPannel.jpg);
        <widget class="QLabel" name="label_2">
         <property name="font">
          <font>
-          <family>Agency FB</family>
+          <family>Bahnschrift Light Condensed</family>
           <pointsize>14</pointsize>
           <bold>true</bold>
          </font>
@@ -128,7 +133,7 @@ border-image:url(:/image/topPannel.jpg);
        <widget class="QLineEdit" name="username">
         <property name="font">
          <font>
-          <family>Agency FB</family>
+          <family>Bahnschrift Light Condensed</family>
           <pointsize>14</pointsize>
           <bold>false</bold>
          </font>
@@ -143,7 +148,7 @@ border-image:url(:/image/topPannel.jpg);
        <widget class="QLabel" name="label_3">
         <property name="font">
          <font>
-          <family>Agency FB</family>
+          <family>Bahnschrift Light Condensed</family>
           <pointsize>14</pointsize>
           <bold>true</bold>
          </font>
@@ -157,7 +162,7 @@ border-image:url(:/image/topPannel.jpg);
        <widget class="QLineEdit" name="password">
         <property name="font">
          <font>
-          <family>Agency FB</family>
+          <family>Bahnschrift Light Condensed</family>
           <pointsize>14</pointsize>
           <bold>false</bold>
          </font>
@@ -176,7 +181,7 @@ border-image:url(:/image/topPannel.jpg);
      <widget class="QPushButton" name="loginBtn">
       <property name="font">
        <font>
-        <family>Agency FB</family>
+        <family>Bahnschrift Condensed</family>
         <pointsize>14</pointsize>
         <bold>true</bold>
        </font>

@@ -97,59 +97,65 @@
     <number>0</number>
    </property>
    <widget class="QWidget" name="main_menu">
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QPushButton" name="pushButton_4">
      <property name="geometry">
       <rect>
        <x>490</x>
-       <y>70</y>
-       <width>281</width>
-       <height>371</height>
+       <y>300</y>
+       <width>200</width>
+       <height>50</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_4">
-      <item>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="font">
-         <font>
-          <family>Agency FB</family>
-          <pointsize>12</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Register a User</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="font">
-         <font>
-          <family>Agency FB</family>
-          <pointsize>12</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>Delete a User</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_4">
-        <property name="font">
-         <font>
-          <family>Agency FB</family>
-          <pointsize>12</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="text">
-         <string>View Users</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light Condensed</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>View Users</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>140</y>
+       <width>200</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light Condensed</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Register a User</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>220</y>
+       <width>200</width>
+       <height>50</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light Condensed</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Delete a User</string>
+     </property>
     </widget>
    </widget>
    <widget class="QWidget" name="user_regirstration">
@@ -164,7 +170,7 @@
      </property>
      <property name="font">
       <font>
-       <family>Agency FB</family>
+       <family>Bahnschrift Light Condensed</family>
        <pointsize>24</pointsize>
        <bold>true</bold>
       </font>
@@ -179,9 +185,9 @@
          <widget class="QLabel" name="label_3">
           <property name="font">
            <font>
-            <family>Agency FB</family>
+            <family>Bahnschrift Light Condensed</family>
             <pointsize>18</pointsize>
-            <bold>false</bold>
+            <bold>true</bold>
            </font>
           </property>
           <property name="text">
@@ -193,7 +199,7 @@
          <widget class="QLineEdit" name="username">
           <property name="font">
            <font>
-            <family>Agency FB</family>
+            <family>Bahnschrift Light Condensed</family>
             <pointsize>14</pointsize>
             <bold>false</bold>
            </font>
@@ -208,9 +214,9 @@
          <widget class="QLabel" name="label_4">
           <property name="font">
            <font>
-            <family>Agency FB</family>
+            <family>Bahnschrift SemiLight Condensed</family>
             <pointsize>18</pointsize>
-            <bold>false</bold>
+            <bold>true</bold>
            </font>
           </property>
           <property name="text">
@@ -222,7 +228,7 @@
          <widget class="QLineEdit" name="password">
           <property name="font">
            <font>
-            <family>Agency FB</family>
+            <family>Bahnschrift Light Condensed</family>
             <pointsize>14</pointsize>
             <bold>false</bold>
            </font>
@@ -241,7 +247,7 @@
        <widget class="QPushButton" name="loginBtn">
         <property name="font">
          <font>
-          <family>Agency FB</family>
+          <family>Bahnschrift Light Condensed</family>
           <pointsize>14</pointsize>
           <bold>true</bold>
          </font>
@@ -269,7 +275,7 @@
      </property>
      <property name="font">
       <font>
-       <family>Agency FB</family>
+       <family>Bahnschrift Condensed</family>
        <pointsize>14</pointsize>
       </font>
      </property>
@@ -290,7 +296,7 @@
      </property>
      <property name="font">
       <font>
-       <family>Agency FB</family>
+       <family>Bahnschrift Light Condensed</family>
        <pointsize>24</pointsize>
        <bold>true</bold>
       </font>
@@ -305,9 +311,9 @@
          <widget class="QLabel" name="label_7">
           <property name="font">
            <font>
-            <family>Agency FB</family>
+            <family>Bahnschrift Light Condensed</family>
             <pointsize>18</pointsize>
-            <bold>false</bold>
+            <bold>true</bold>
            </font>
           </property>
           <property name="text">
@@ -319,7 +325,7 @@
          <widget class="QLineEdit" name="username_3">
           <property name="font">
            <font>
-            <family>Agency FB</family>
+            <family>Bahnschrift Light Condensed</family>
             <pointsize>14</pointsize>
             <bold>false</bold>
            </font>
@@ -332,7 +338,7 @@
        <widget class="QPushButton" name="loginBtn_3">
         <property name="font">
          <font>
-          <family>Agency FB</family>
+          <family>Bahnschrift Light Condensed</family>
           <pointsize>14</pointsize>
           <bold>true</bold>
          </font>
@@ -360,7 +366,7 @@
      </property>
      <property name="font">
       <font>
-       <family>Agency FB</family>
+       <family>Bahnschrift Condensed</family>
        <pointsize>14</pointsize>
       </font>
      </property>
@@ -379,6 +385,11 @@
        <height>301</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Bahnschrift Light Condensed</family>
+      </font>
+     </property>
     </widget>
     <widget class="QPushButton" name="pushButton_11">
      <property name="geometry">
@@ -391,7 +402,7 @@
      </property>
      <property name="font">
       <font>
-       <family>Agency FB</family>
+       <family>Bahnschrift Condensed</family>
        <pointsize>14</pointsize>
       </font>
      </property>

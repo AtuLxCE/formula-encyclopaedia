@@ -87,10 +87,10 @@ void admin::on_pushButton_4_clicked()
     {
         qm = new QSqlQueryModel();
         qm->setQuery("Select username from credentials");
-        QFont font ("Agency FB", 12);
-        QFont serifFont("Agency FB", 16, QFont::Bold);
+        QFont font ("Bahnschrift Light Condensed", 12);
+        QFont Font("Bahnschrift Light Condensed", 16, QFont::Bold);
         ui->tableView->setModel(qm);
-        ui->tableView->horizontalHeader()->setFont(serifFont);
+        ui->tableView->horizontalHeader()->setFont(Font);
         ui->tableView->setFont(font);
         ui->tableView->resizeColumnsToContents();
     }

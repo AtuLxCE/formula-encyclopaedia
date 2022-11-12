@@ -84,7 +84,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Tw Cen MT</family>
+     <family>Bahnschrift Condensed</family>
      <pointsize>12</pointsize>
      <bold>false</bold>
     </font>
@@ -108,7 +108,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QPushButton" name="pushButton_2">
@@ -116,13 +116,13 @@
       <rect>
        <x>490</x>
        <y>220</y>
-       <width>211</width>
-       <height>51</height>
+       <width>200</width>
+       <height>50</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Agency FB</family>
+       <family>Bahnschrift Condensed</family>
        <pointsize>14</pointsize>
        <bold>true</bold>
       </font>
@@ -144,7 +144,7 @@
      </property>
      <property name="font">
       <font>
-       <family>Agency FB</family>
+       <family>Bahnschrift Condensed</family>
        <pointsize>14</pointsize>
        <bold>true</bold>
       </font>

@@ -24,7 +24,6 @@ Login::~Login()
 
 void Login::on_loginBtn_clicked()
 {
-    close();
     // MySql Connection
     QSqlDatabase db;
     db = QSqlDatabase::addDatabase("QMYSQL", "MyConnect");
@@ -52,21 +51,63 @@ void Login::on_loginBtn_clicked()
         }
         else
         {
-            if (type == "Guest")
+            if (type==""){
+                QMessageBox::information(this, "UserType Not Selected", "Please select a UserType!!");
+            }
+            else if (type == "Guest")
             {
-                QMessageBox::information(this, "Guest", "Logged in as a Guest");
+                QPixmap login_success(":/image/login_success_resized");
+                QMessageBox msgBox;
+                msgBox.setWindowTitle("Login Success");
+                msgBox.setText("Logged in as Guest");
+                msgBox.setIconPixmap(login_success);
+                msgBox.exec();
+                close();
                 guest guest_obj;
                 guest_obj.setModal(true);
                 guest_obj.exec();
             }
 
-            else if (username == name && password == pass && type == "Admin")
+            else if (type == "Admin")
             {
-                // login for admin
-                QMessageBox::information(this, "Admin", "Logged in as an Admin");
-                admin admin_obj;
-                admin_obj.setModal(true);
-                admin_obj.exec();
+                if (username == name && password == pass){
+                    // login for admin
+                    ui->username->clear();
+                    QPixmap login_success(":/image/login_success_resized");
+                    QMessageBox msgBox;
+                    msgBox.setWindowTitle("Login Success");
+                    msgBox.setText("Logged in as Admin");
+                    msgBox.setIconPixmap(login_success);
+                    msgBox.exec();
+
+
+
+                    this->exec();
+
+                    close();
+                    admin admin_obj;
+                    admin_obj.setModal(true);
+                    admin_obj.exec();
+                 }
+                else if (username != name && password == pass){
+                    QMessageBox::information(this, "Login Failed", "Incorrect Username !!");
+
+                    ui->username->clear();
+                    ui->password->clear();
+                }
+
+                else if (username == name && password != pass){
+                    QMessageBox::information(this, "Login Failed", "Incorrect Password !!");
+                    ui->password->clear();
+                }
+
+                else if (username != name && password != pass){
+                    QMessageBox::information(this, "Login Failed", "Incorrect Username and Password !!");
+                    ui->username->clear();
+                    ui->password->clear();
+                }
+
+
             }
 
             while (query.next())
@@ -78,7 +119,13 @@ void Login::on_loginBtn_clicked()
                 if (usernameFromDB == username && passwordFromDB == password && typeFromDB == "User")
                 {
                         // login for user
-                        QMessageBox::information(this, "User", "Logged in as an User");
+                        QPixmap login_success(":/image/login_success_resized");
+                        QMessageBox msgBox;
+                        msgBox.setWindowTitle("Login Success");
+                        msgBox.setText("Logged in as User");
+                        msgBox.setIconPixmap(login_success);
+                        msgBox.exec();
+                        close();
                         user user_obj;
                         user_obj.setModal(true);
                         user_obj.exec();

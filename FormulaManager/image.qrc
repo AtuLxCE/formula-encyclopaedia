@@ -9,7 +9,5 @@
         <file>edited_login.png</file>
         <file>login_success_resized.png</file>
     </qresource>
-    <qresource prefix="/">
-        <file>../../../login_success.png</file>
-    </qresource>
+    <qresource prefix="/"/>
 </RCC>

@@ -48,6 +48,14 @@ private slots:
 
     void on_pushButton_14_clicked();
 
+    void on_comboBox_activated(int index);
+
+    void on_comboBox_2_activated(int index);
+
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_15_clicked();
+
 private:
     Ui::user *ui;
     QSqlDatabase database;

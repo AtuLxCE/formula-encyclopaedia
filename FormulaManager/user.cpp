@@ -1,10 +1,21 @@
 #include "user.h"
 #include "ui_user.h"
 
+QString subject;
+QString title;
+
 user::user(QWidget *parent) : QDialog(parent),
                               ui(new Ui::user)
 {
     ui->setupUi(this);
+    ui->comboBox->setPlaceholderText("                                                                                        Select Subject");
+    ui->comboBox->setCurrentIndex(-1);
+    ui->comboBox->addItem("Applied Mechanics");
+    ui->comboBox->addItem("Engineering Chemistry");
+    ui->comboBox->addItem("Electric Circuit Theory");
+    ui->comboBox->addItem("Electromagnetism");
+    ui->comboBox->addItem("Engineering Math");
+    ui->comboBox->addItem("Engineering Physics");
 }
 
 user::~user()
@@ -113,7 +124,6 @@ void user::on_pushButton_3_clicked()
         QMessageBox::information(this, "Not Connected", "Database is not connected");
     }
     database.close();
-
 }
 
 void user::on_pushButton_4_clicked()
@@ -347,3 +357,160 @@ void user::on_pushButton_14_clicked()
     ui->stackedWidget->setCurrentIndex(0);
     database.close();
 }
+
+void user::on_comboBox_activated(int index = 0)
+{
+    subject = ui->comboBox->currentText();
+    ui->stackedWidget_2->setCurrentIndex(1);
+    database = QSqlDatabase::addDatabase("QMYSQL");
+    database.setHostName("localhost");
+    database.setUserName("root");
+    database.setPassword("password");
+    database.setDatabaseName("formula");
+
+    if (database.open())
+    {
+        // Retrieve Data from input fields
+        QString name;
+        QString path;
+        QSqlQuery qry;
+           // Run our insert Query
+        if (subject == "Applied Mechanics"){
+
+        qry.prepare("select * from applied");
+}
+        else if(subject == "Engineering Chemistry"){
+
+            qry.prepare("select * from chemistry");
+    }
+        else if(subject == "Electric Circuit Theory"){
+
+            qry.prepare("select * from ect");
+    }
+        else if(subject == "Electromagnetism"){
+
+
+            qry.prepare("select * from em");
+    }
+        else if(subject == "Engineering Math"){
+
+
+            qry.prepare("select * from math");
+    }
+        else if(subject == "Engineering Physics"){
+
+
+            qry.prepare("select * from physics");
+    }
+
+
+        if (!qry.exec())
+        {
+            QMessageBox::information(this, subject , "Query Failed To  Execute");
+        }
+        else
+        {
+
+            while (qry.next())
+            {
+                QString nameFromDB = qry.value(0).toString();
+                QString pathFromDB = qry.value(1).toString();
+                ui->comboBox_2->setPlaceholderText("                                                                          Select Formula");
+                ui->comboBox_2->setCurrentIndex(-1);
+                ui->comboBox_2->addItem(nameFromDB);
+            }
+        }
+    }
+
+    else
+    {
+        QMessageBox::information(this, "Not Connected", "Database is not connected");
+    }
+    database.close();
+}
+
+void user::on_comboBox_2_activated(int index = 0)
+{
+    title = ui->comboBox_2->currentText();
+    ui->stackedWidget->setCurrentIndex(7);
+    database = QSqlDatabase::addDatabase("QMYSQL");
+    database.setHostName("localhost");
+    database.setUserName("root");
+    database.setPassword("password");
+    database.setDatabaseName("formula");
+
+    if (database.open())
+    {
+        // Retrieve Data from input fields
+        QString name;
+        QString path;
+
+        // Run our insert Query
+        QSqlQuery qry;
+
+        if (subject == "Applied Mechanics"){
+
+        qry.prepare("select * from applied");
+}
+        else if(subject == "Engineering Chemistry"){
+
+            qry.prepare("select * from chemistry");
+    }
+        else if(subject == "Electric Circuit Theory"){
+
+            qry.prepare("select * from ect");
+    }
+        else if(subject == "Electromagnetism"){
+
+
+            qry.prepare("select * from em");
+    }
+        else if(subject == "Engineering Math"){
+
+
+            qry.prepare("select * from math");
+    }
+        else if(subject == "Engineering Physics"){
+
+
+            qry.prepare("select * from physics");
+    }
+
+        if (!qry.exec())
+        {
+            QMessageBox::information(this, subject, "Query Failed To  Execute");
+        }
+        else
+        {
+
+            while (qry.next())
+            {
+                QString nameFromDB = qry.value(0).toString();
+                QString pathFromDB = qry.value(1).toString();
+
+                if (nameFromDB == title)
+                {
+
+                    QPixmap pix(pathFromDB);
+                    ui->label_5->setPixmap(pix);
+                }
+            }
+        }
+    }
+
+    database.close();
+}
+
+void user::on_pushButton_7_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+    database.close();
+}
+
+
+void user::on_pushButton_15_clicked()
+{
+    ui->comboBox_2->clear();
+    ui->stackedWidget_2->setCurrentIndex(0);
+}
+

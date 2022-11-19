@@ -79,11 +79,7 @@ void Login::on_loginBtn_clicked()
                     msgBox.setText("Logged in as Admin");
                     msgBox.setIconPixmap(login_success);
                     msgBox.exec();
-
-
-
                     this->exec();
-
                     close();
                     admin admin_obj;
                     admin_obj.setModal(true);
@@ -109,14 +105,12 @@ void Login::on_loginBtn_clicked()
 
 
             }
-
+            else if(type == "User"){
             while (query.next())
             {
                 QString usernameFromDB = query.value(0).toString();
                 QString passwordFromDB = query.value(1).toString();
-                QString typeFromDB = query.value(2).toString();
-
-                if (usernameFromDB == username && passwordFromDB == password && typeFromDB == "User")
+                if (usernameFromDB == username && passwordFromDB == password)
                 {
                         // login for user
                         QPixmap login_success(":/image/login_success_resized");
@@ -131,12 +125,24 @@ void Login::on_loginBtn_clicked()
                         user_obj.exec();
 
                 }
-                /*else
-                {
-                    QMessageBox::information(this, "Fail", "Login Failed");
-                }*/
+                else if (username != usernameFromDB && password == passwordFromDB ){
+                    QMessageBox::information(this, "Login Failed", "Incorrect Username !!");
+
+                    ui->username->clear();
+                    ui->password->clear();
+                }
+                else if (usernameFromDB == username && password != passwordFromDB){
+                    QMessageBox::information(this, "Login Failed", "Incorrect Password !!");
+                    ui->password->clear();
+                }
+                else if (username  != usernameFromDB && password != passwordFromDB){
+                    QMessageBox::information(this, "Login Failed", "Incorrect Username and Password !!");
+                    ui->username->clear();
+                    ui->password->clear();
+                }
             }
         }
+    }
     }
     else
     {

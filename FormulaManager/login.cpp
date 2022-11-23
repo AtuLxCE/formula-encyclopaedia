@@ -51,7 +51,8 @@ void Login::on_loginBtn_clicked()
         }
         else
         {
-            if (type==""){
+            if (type == "")
+            {
                 QMessageBox::information(this, "UserType Not Selected", "Please select a UserType!!");
             }
             else if (type == "Guest")
@@ -70,7 +71,8 @@ void Login::on_loginBtn_clicked()
 
             else if (type == "Admin")
             {
-                if (username == name && password == pass){
+                if (username == name && password == pass)
+                {
                     // login for admin
                     ui->username->clear();
                     QPixmap login_success(":/image/login_success_resized");
@@ -84,34 +86,36 @@ void Login::on_loginBtn_clicked()
                     admin admin_obj;
                     admin_obj.setModal(true);
                     admin_obj.exec();
-                 }
-                else if (username != name && password == pass){
+                }
+                else if (username != name && password == pass)
+                {
                     QMessageBox::information(this, "Login Failed", "Incorrect Username !!");
 
                     ui->username->clear();
                     ui->password->clear();
                 }
 
-                else if (username == name && password != pass){
+                else if (username == name && password != pass)
+                {
                     QMessageBox::information(this, "Login Failed", "Incorrect Password !!");
                     ui->password->clear();
                 }
 
-                else if (username != name && password != pass){
+                else if (username != name && password != pass)
+                {
                     QMessageBox::information(this, "Login Failed", "Incorrect Username and Password !!");
                     ui->username->clear();
                     ui->password->clear();
                 }
-
-
             }
-            else if(type == "User"){
-            while (query.next())
+            else if (type == "User")
             {
-                QString usernameFromDB = query.value(0).toString();
-                QString passwordFromDB = query.value(1).toString();
-                if (usernameFromDB == username && passwordFromDB == password)
+                while (query.next())
                 {
+                    QString usernameFromDB = query.value(0).toString();
+                    QString passwordFromDB = query.value(1).toString();
+                    if (usernameFromDB == username && passwordFromDB == password)
+                    {
                         // login for user
                         QPixmap login_success(":/image/login_success_resized");
                         QMessageBox msgBox;
@@ -123,26 +127,28 @@ void Login::on_loginBtn_clicked()
                         user user_obj;
                         user_obj.setModal(true);
                         user_obj.exec();
+                    }
+                    else if (username != usernameFromDB && password == passwordFromDB)
+                    {
+                        QMessageBox::information(this, "Login Failed", "Incorrect Username !!");
 
-                }
-                else if (username != usernameFromDB && password == passwordFromDB ){
-                    QMessageBox::information(this, "Login Failed", "Incorrect Username !!");
-
-                    ui->username->clear();
-                    ui->password->clear();
-                }
-                else if (usernameFromDB == username && password != passwordFromDB){
-                    QMessageBox::information(this, "Login Failed", "Incorrect Password !!");
-                    ui->password->clear();
-                }
-                else if (username  != usernameFromDB && password != passwordFromDB){
-                    QMessageBox::information(this, "Login Failed", "Incorrect Username and Password !!");
-                    ui->username->clear();
-                    ui->password->clear();
+                        ui->username->clear();
+                        ui->password->clear();
+                    }
+                    else if (usernameFromDB == username && password != passwordFromDB)
+                    {
+                        QMessageBox::information(this, "Login Failed", "Incorrect Password !!");
+                        ui->password->clear();
+                    }
+                    else if (username != usernameFromDB && password != passwordFromDB)
+                    {
+                        QMessageBox::information(this, "Login Failed", "Incorrect Username and Password !!");
+                        ui->username->clear();
+                        ui->password->clear();
+                    }
                 }
             }
         }
-    }
     }
     else
     {

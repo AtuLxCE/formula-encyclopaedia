@@ -87,7 +87,7 @@ void admin::on_pushButton_4_clicked()
     {
         qm = new QSqlQueryModel();
         qm->setQuery("Select username from credentials");
-        QFont font ("Bahnschrift Light Condensed", 12);
+        QFont font("Bahnschrift Light Condensed", 12);
         QFont Font("Bahnschrift Light Condensed", 16, QFont::Bold);
         ui->tableView->setModel(qm);
         ui->tableView->horizontalHeader()->setFont(Font);

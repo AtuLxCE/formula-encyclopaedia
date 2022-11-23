@@ -355,39 +355,41 @@ void user::on_comboBox_activated(int index = 0)
     if (database.open())
     {
         QSqlQuery qry;
-           // Run our insert Query
-        if (subject == "Applied Mechanics"){
+        // Run our insert Query
+        if (subject == "Applied Mechanics")
+        {
 
-        qry.prepare("select * from applied");
-}
-        else if(subject == "Engineering Chemistry"){
+            qry.prepare("select * from applied");
+        }
+        else if (subject == "Engineering Chemistry")
+        {
 
             qry.prepare("select * from chemistry");
-    }
-        else if(subject == "Electric Circuit Theory"){
+        }
+        else if (subject == "Electric Circuit Theory")
+        {
 
             qry.prepare("select * from ect");
-    }
-        else if(subject == "Electromagnetism"){
-
+        }
+        else if (subject == "Electromagnetism")
+        {
 
             qry.prepare("select * from em");
-    }
-        else if(subject == "Engineering Math"){
-
+        }
+        else if (subject == "Engineering Math")
+        {
 
             qry.prepare("select * from math");
-    }
-        else if(subject == "Engineering Physics"){
-
+        }
+        else if (subject == "Engineering Physics")
+        {
 
             qry.prepare("select * from physics");
-    }
-
+        }
 
         if (!qry.exec())
         {
-            QMessageBox::information(this, subject , "Query Failed To  Execute");
+            QMessageBox::information(this, subject, "Query Failed To  Execute");
         }
         else
         {
@@ -429,33 +431,36 @@ void user::on_comboBox_2_activated(int index = 0)
         // Run our insert Query
         QSqlQuery qry;
 
-        if (subject == "Applied Mechanics"){
+        if (subject == "Applied Mechanics")
+        {
 
-        qry.prepare("select * from applied");
-}
-        else if(subject == "Engineering Chemistry"){
+            qry.prepare("select * from applied");
+        }
+        else if (subject == "Engineering Chemistry")
+        {
 
             qry.prepare("select * from chemistry");
-    }
-        else if(subject == "Electric Circuit Theory"){
+        }
+        else if (subject == "Electric Circuit Theory")
+        {
 
             qry.prepare("select * from ect");
-    }
-        else if(subject == "Electromagnetism"){
-
+        }
+        else if (subject == "Electromagnetism")
+        {
 
             qry.prepare("select * from em");
-    }
-        else if(subject == "Engineering Math"){
-
+        }
+        else if (subject == "Engineering Math")
+        {
 
             qry.prepare("select * from math");
-    }
-        else if(subject == "Engineering Physics"){
-
+        }
+        else if (subject == "Engineering Physics")
+        {
 
             qry.prepare("select * from physics");
-    }
+        }
 
         if (!qry.exec())
         {
@@ -489,10 +494,8 @@ void user::on_pushButton_7_clicked()
     database.close();
 }
 
-
 void user::on_pushButton_15_clicked()
 {
     ui->comboBox_2->clear();
     ui->stackedWidget_2->setCurrentIndex(0);
 }
-

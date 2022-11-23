@@ -138,10 +138,6 @@ void user::on_pushButton_4_clicked()
 
     if (database.open())
     {
-        // Retrieve Data from input fields
-        QString name;
-        QString path;
-
         // Run our insert Query
         QSqlQuery qry;
 
@@ -187,10 +183,6 @@ void user::on_pushButton_5_clicked()
 
     if (database.open())
     {
-        // Retrieve Data from input fields
-        QString name;
-        QString path;
-
         // Run our insert Query
         QSqlQuery qry;
 
@@ -236,10 +228,6 @@ void user::on_pushButton_8_clicked()
 
     if (database.open())
     {
-        // Retrieve Data from input fields
-        QString name;
-        QString path;
-
         // Run our insert Query
         QSqlQuery qry;
 
@@ -285,10 +273,6 @@ void user::on_pushButton_6_clicked()
 
     if (database.open())
     {
-        // Retrieve Data from input fields
-        QString name;
-        QString path;
-
         // Run our insert Query
         QSqlQuery qry;
 
@@ -370,9 +354,6 @@ void user::on_comboBox_activated(int index = 0)
 
     if (database.open())
     {
-        // Retrieve Data from input fields
-        QString name;
-        QString path;
         QSqlQuery qry;
            // Run our insert Query
         if (subject == "Applied Mechanics"){
@@ -493,6 +474,7 @@ void user::on_comboBox_2_activated(int index = 0)
 
                     QPixmap pix(pathFromDB);
                     ui->label_5->setPixmap(pix);
+                    ui->label_5->setAlignment(Qt::AlignCenter);
                 }
             }
         }

@@ -599,8 +599,8 @@
   </widget>
  </widget>
  <resources>
-  <include location="image.qrc"/>
   <include location="thumbnails.qrc"/>
+  <include location="image.qrc"/>
  </resources>
  <connections/>
 </ui>

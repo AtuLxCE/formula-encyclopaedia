@@ -508,6 +508,9 @@ void user::on_pushButton_16_clicked()
 
 void user::on_pushButton_17_clicked()
 {
+
     ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget_2->setCurrentIndex(0);
+    ui->comboBox->setCurrentIndex(-1);
 }
 

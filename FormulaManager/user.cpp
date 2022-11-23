@@ -499,3 +499,15 @@ void user::on_pushButton_15_clicked()
     ui->comboBox_2->clear();
     ui->stackedWidget_2->setCurrentIndex(0);
 }
+
+void user::on_pushButton_16_clicked()
+{
+    close();
+}
+
+
+void user::on_pushButton_17_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+

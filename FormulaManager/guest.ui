@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1280</width>
-    <height>720</height>
+    <width>1472</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="font">
@@ -29,8 +29,8 @@
     <rect>
      <x>90</x>
      <y>10</y>
-     <width>211</width>
-     <height>61</height>
+     <width>210</width>
+     <height>60</height>
     </rect>
    </property>
    <property name="font">
@@ -57,10 +57,10 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>20</x>
      <y>10</y>
-     <width>51</width>
-     <height>51</height>
+     <width>60</width>
+     <height>60</height>
     </rect>
    </property>
    <property name="text">
@@ -76,10 +76,10 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>1180</x>
-     <y>680</y>
-     <width>91</width>
-     <height>29</height>
+     <x>1360</x>
+     <y>650</y>
+     <width>90</width>
+     <height>30</height>
     </rect>
    </property>
    <property name="font">
@@ -101,20 +101,20 @@
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>110</y>
-     <width>1221</width>
-     <height>571</height>
+     <x>0</x>
+     <y>90</y>
+     <width>1472</width>
+     <height>570</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>490</x>
+       <x>631</x>
        <y>220</y>
        <width>200</width>
        <height>50</height>
@@ -136,8 +136,8 @@
     <widget class="QPushButton" name="pushButton_10">
      <property name="geometry">
       <rect>
-       <x>520</x>
-       <y>490</y>
+       <x>670</x>
+       <y>510</y>
        <width>121</width>
        <height>29</height>
       </rect>
@@ -328,8 +328,8 @@
   </widget>
  </widget>
  <resources>
-  <include location="formulas.qrc"/>
   <include location="image.qrc"/>
+  <include location="formulas.qrc"/>
  </resources>
  <connections/>
 </ui>

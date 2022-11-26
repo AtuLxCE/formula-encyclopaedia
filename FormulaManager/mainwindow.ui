@@ -25,7 +25,7 @@ border-image: url(:/image/unknown.jpg);
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="4" column="2">
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="pushButton_exit">
       <property name="font">
        <font>
         <family>Tw Cen MT</family>
@@ -63,7 +63,7 @@ border-image: url(:/image/unknown.jpg);
      </widget>
     </item>
     <item row="4" column="1">
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="pushButton_login">
       <property name="font">
        <font>
         <family>Tw Cen MT</family>
@@ -92,9 +92,9 @@ border-image: url(:/image/unknown.jpg);
     </item>
    </layout>
    <zorder>commandLinkButton_4</zorder>
-   <zorder>pushButton_2</zorder>
+   <zorder>pushButton_exit</zorder>
    <zorder>commandLinkButton_5</zorder>
-   <zorder>pushButton</zorder>
+   <zorder>pushButton_login</zorder>
    <zorder>commandLinkButton_3</zorder>
   </widget>
  </widget>

@@ -17,8 +17,6 @@ admin::~admin()
 
 void admin::on_loginBtn_clicked()
 {
-    ui->username->clear();
-    ui->password->clear();
     // connecting to mysql database
     database = QSqlDatabase::addDatabase("QMYSQL");
     database.setHostName("localhost");
@@ -56,25 +54,30 @@ void admin::on_loginBtn_clicked()
     {
         QMessageBox::information(this, "Not Connected", "Database is not connected");
     }
+    ui->username->clear();
+    ui->password->clear();
 }
 
-void admin::on_pushButton_clicked()
+void admin::on_pushButton_logout_clicked()
 {
     close();
 }
 
-void admin::on_pushButton_2_clicked()
+void admin::on_pushButton_register_clicked()
 {
+
     ui->stackedWidget->setCurrentIndex(1);
 }
 
-void admin::on_pushButton_3_clicked()
+void admin::on_pushButton_delete_clicked()
 {
+
     ui->stackedWidget->setCurrentIndex(2);
 }
 
-void admin::on_pushButton_4_clicked()
+void admin::on_pushButton_view_clicked()
 {
+
     ui->stackedWidget->setCurrentIndex(3);
     // connecting to mysql database
     database = QSqlDatabase::addDatabase("QMYSQL");
@@ -96,29 +99,23 @@ void admin::on_pushButton_4_clicked()
     }
 }
 
-void admin::on_pushButton_8_clicked()
+void admin::on_pushButton_go_back_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
 }
 
-void admin::on_pushButton_11_clicked()
+void admin::on_pushButton_go_back_2_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
 }
 
-void admin::on_pushButton_10_clicked()
+void admin::on_pushButton_go_back_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
 }
 
-void admin::on_pushButton_9_clicked()
+void admin::on_loginBtn_delete_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
-}
-
-void admin::on_loginBtn_3_clicked()
-{
-    ui->username_3->clear();
     // connecting to mysql database
     database = QSqlDatabase::addDatabase("QMYSQL");
     database.setHostName("localhost");
@@ -142,4 +139,5 @@ void admin::on_loginBtn_3_clicked()
             QMessageBox::information(this, "Failed", "User doesn't exist");
         }
     }
+    ui->username_3->clear();
 }

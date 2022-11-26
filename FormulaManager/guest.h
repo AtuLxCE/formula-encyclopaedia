@@ -17,11 +17,11 @@ public:
     ~guest();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_pushButton_logout_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_pushButton_view_formula_clicked();
 
-    void on_pushButton_10_clicked();
+    void on_pushButton_go_back_clicked();
 
 private:
     Ui::guest *ui;

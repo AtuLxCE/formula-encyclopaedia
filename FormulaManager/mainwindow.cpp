@@ -15,7 +15,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_pushButton_login_clicked()
 {
     //     for login window
     Login login_obj;
@@ -23,7 +23,7 @@ void MainWindow::on_pushButton_clicked()
     login_obj.exec();
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_pushButton_exit_clicked()
 {
     QCoreApplication::quit();
 }

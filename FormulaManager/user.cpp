@@ -23,12 +23,8 @@ user::~user()
     delete ui;
 }
 
-void user::on_pushButton_clicked()
-{
-    close();
-}
 
-void user::on_pushButton_2_clicked()
+void user::on_pushButton_applied_mechanics_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
     // connecting to mysql database
@@ -40,10 +36,6 @@ void user::on_pushButton_2_clicked()
 
     if (database.open())
     {
-        // Retrieve Data from input fields
-        QString name;
-        QString path;
-
         // Run our insert Query
         QSqlQuery qry;
 
@@ -61,11 +53,14 @@ void user::on_pushButton_2_clicked()
                 QString nameFromDB = qry.value(0).toString();
                 QString pathFromDB = qry.value(1).toString();
                 ui->listWidget->setViewMode(QListWidget::IconMode);
-                ui->listWidget->setIconSize(QSize(500, 500));
+                ui->listWidget->setIconSize(QSize(400, 500));
                 ui->listWidget->setResizeMode(QListWidget::Adjust);
                 QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
+                item->setTextAlignment(Qt::AlignCenter);
                 ui->listWidget->addItem(item);
                 ui->listWidget->setDragDropMode(QAbstractItemView::NoDragDrop);
+                ui->listWidget->setStyleSheet("QListWidget {padding: 10px;} QListWidget::item { margin: 10px; }");
+                ui->listWidget->setStyleSheet("QListWidget:item {border-bottom: 2px solid black;}QListWidget{background-color: white;}");
             }
         }
     }
@@ -77,7 +72,7 @@ void user::on_pushButton_2_clicked()
     database.close();
 }
 
-void user::on_pushButton_3_clicked()
+void user::on_pushButton_engineering_chemistry_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
     // connecting to mysql database
@@ -89,10 +84,6 @@ void user::on_pushButton_3_clicked()
 
     if (database.open())
     {
-        // Retrieve Data from input fields
-        QString name;
-        QString path;
-
         // Run our insert Query
         QSqlQuery qry;
 
@@ -110,11 +101,13 @@ void user::on_pushButton_3_clicked()
                 QString nameFromDB = qry.value(0).toString();
                 QString pathFromDB = qry.value(1).toString();
                 ui->listWidget_2->setViewMode(QListWidget::IconMode);
-                ui->listWidget_2->setIconSize(QSize(500, 500));
+                ui->listWidget_2->setIconSize(QSize(400, 400));
                 ui->listWidget_2->setResizeMode(QListWidget::Adjust);
                 QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
                 ui->listWidget_2->addItem(item);
                 ui->listWidget_2->setDragDropMode(QAbstractItemView::NoDragDrop);
+                ui->listWidget_2->setStyleSheet("QListWidget {padding: 10px;} QListWidget::item { margin: 10px; }");
+                ui->listWidget_2->setStyleSheet("QListWidget:item {border-bottom: 2px solid black;}QListWidget{background-color: white;}");
             }
         }
     }
@@ -126,7 +119,7 @@ void user::on_pushButton_3_clicked()
     database.close();
 }
 
-void user::on_pushButton_4_clicked()
+void user::on_pushButton_electric_circuit_theory_clicked()
 {
     ui->stackedWidget->setCurrentIndex(3);
     // connecting to mysql database
@@ -155,11 +148,13 @@ void user::on_pushButton_4_clicked()
                 QString nameFromDB = qry.value(0).toString();
                 QString pathFromDB = qry.value(1).toString();
                 ui->listWidget_3->setViewMode(QListWidget::IconMode);
-                ui->listWidget_3->setIconSize(QSize(500, 500));
+                ui->listWidget_3->setIconSize(QSize(400, 400));
                 ui->listWidget_3->setResizeMode(QListWidget::Adjust);
                 QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
                 ui->listWidget_3->addItem(item);
                 ui->listWidget_3->setDragDropMode(QAbstractItemView::NoDragDrop);
+                ui->listWidget_3->setStyleSheet("QListWidget {padding: 10px;} QListWidget::item { margin: 10px; }");
+                ui->listWidget_3->setStyleSheet("QListWidget:item {border-bottom: 2px solid black;}QListWidget{background-color: white;}");
             }
         }
     }
@@ -171,7 +166,7 @@ void user::on_pushButton_4_clicked()
     database.close();
 }
 
-void user::on_pushButton_5_clicked()
+void user::on_pushButton_electromagnetism_clicked()
 {
     ui->stackedWidget->setCurrentIndex(4);
     // connecting to mysql database
@@ -200,11 +195,13 @@ void user::on_pushButton_5_clicked()
                 QString nameFromDB = qry.value(0).toString();
                 QString pathFromDB = qry.value(1).toString();
                 ui->listWidget_4->setViewMode(QListWidget::IconMode);
-                ui->listWidget_4->setIconSize(QSize(500, 500));
+                ui->listWidget_4->setIconSize(QSize(400, 400));
                 ui->listWidget_4->setResizeMode(QListWidget::Adjust);
                 QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
                 ui->listWidget_4->addItem(item);
                 ui->listWidget_4->setDragDropMode(QAbstractItemView::NoDragDrop);
+                ui->listWidget_4->setStyleSheet("QListWidget {padding: 10px;} QListWidget::item { margin: 10px; }");
+                ui->listWidget_4->setStyleSheet("QListWidget:item {border-bottom: 2px solid black;}QListWidget{background-color: white;}");
             }
         }
     }
@@ -216,7 +213,7 @@ void user::on_pushButton_5_clicked()
     database.close();
 }
 
-void user::on_pushButton_8_clicked()
+void user::on_pushButton_engineering_math_clicked()
 {
     ui->stackedWidget->setCurrentIndex(5);
     // connecting to mysql database
@@ -245,11 +242,13 @@ void user::on_pushButton_8_clicked()
                 QString nameFromDB = qry.value(0).toString();
                 QString pathFromDB = qry.value(1).toString();
                 ui->listWidget_5->setViewMode(QListWidget::IconMode);
-                ui->listWidget_5->setIconSize(QSize(500, 500));
+                ui->listWidget_5->setIconSize(QSize(400, 400));
                 ui->listWidget_5->setResizeMode(QListWidget::Adjust);
                 QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
                 ui->listWidget_5->addItem(item);
                 ui->listWidget_5->setDragDropMode(QAbstractItemView::NoDragDrop);
+                ui->listWidget_5->setStyleSheet("QListWidget {padding: 10px;} QListWidget::item { margin: 10px; }");
+                ui->listWidget_5->setStyleSheet("QListWidget:item {border-bottom: 2px solid black;}QListWidget{background-color: white;}");
             }
         }
     }
@@ -261,7 +260,7 @@ void user::on_pushButton_8_clicked()
     database.close();
 }
 
-void user::on_pushButton_6_clicked()
+void user::on_pushButton_engineering_physics_clicked()
 {
     ui->stackedWidget->setCurrentIndex(6);
     // connecting to mysql database
@@ -290,11 +289,13 @@ void user::on_pushButton_6_clicked()
                 QString nameFromDB = qry.value(0).toString();
                 QString pathFromDB = qry.value(1).toString();
                 ui->listWidget_6->setViewMode(QListWidget::IconMode);
-                ui->listWidget_6->setIconSize(QSize(500, 500));
+                ui->listWidget_6->setIconSize(QSize(400, 400));
                 ui->listWidget_6->setResizeMode(QListWidget::Adjust);
                 QListWidgetItem *item = new QListWidgetItem(QIcon(pathFromDB), QString(nameFromDB));
                 ui->listWidget_6->addItem(item);
                 ui->listWidget_6->setDragDropMode(QAbstractItemView::NoDragDrop);
+                ui->listWidget_6->setStyleSheet("QListWidget {padding: 10px;} QListWidget::item { margin: 10px; }");
+                ui->listWidget_6->setStyleSheet("QListWidget:item {border-bottom: 2px solid black;}QListWidget{background-color: white;}");
             }
         }
     }
@@ -306,54 +307,60 @@ void user::on_pushButton_6_clicked()
     database.close();
 }
 
-void user::on_pushButton_9_clicked()
+void user::on_pushButton_go_back_1_clicked()
 {
-    //c
+
+    ui->listWidget->clear();
     database.close();
     ui->stackedWidget->setCurrentIndex(0);
     ui->stackedWidget_2->setCurrentIndex(0);
     ui->comboBox->setCurrentIndex(-1);
 }
 
-void user::on_pushButton_10_clicked()
+void user::on_pushButton_go_back_2_clicked()
 {
-    //c
+
+    ui->listWidget_2->clear();
     database.close();
     ui->stackedWidget->setCurrentIndex(0);
     ui->stackedWidget_2->setCurrentIndex(0);
     ui->comboBox->setCurrentIndex(-1);
 }
 
-void user::on_pushButton_11_clicked()
+void user::on_pushButton_go_back_3_clicked()
 {
-    //c
+
+    ui->listWidget_3->clear();
     database.close();
     ui->stackedWidget->setCurrentIndex(0);
     ui->stackedWidget_2->setCurrentIndex(0);
     ui->comboBox->setCurrentIndex(-1);
 }
 
-void user::on_pushButton_12_clicked()
+void user::on_pushButton_go_back_4_clicked()
 {
-    //c
+
+    ui->listWidget_4->clear();
     database.close();
     ui->stackedWidget->setCurrentIndex(0);
     ui->stackedWidget_2->setCurrentIndex(0);
     ui->comboBox->setCurrentIndex(-1);
 }
 
-void user::on_pushButton_13_clicked()
+void user::on_pushButton_go_back_5_clicked()
 {
-    //c
+
+    ui->listWidget_5->clear();
     database.close();
     ui->stackedWidget->setCurrentIndex(0);
     ui->stackedWidget_2->setCurrentIndex(0);
     ui->comboBox->setCurrentIndex(-1);
 }
 
-void user::on_pushButton_14_clicked()
+void user::on_pushButton_go_back_6_clicked()
 {
-    //c
+
+    ui->listWidget_6->clear();
     database.close();
     ui->stackedWidget->setCurrentIndex(0);
     ui->stackedWidget_2->setCurrentIndex(0);
@@ -362,6 +369,7 @@ void user::on_pushButton_14_clicked()
 
 void user::on_comboBox_activated(int index = 0)
 {
+    index =index + 0;
     subject = ui->comboBox->currentText();
     ui->stackedWidget_2->setCurrentIndex(1);
     database = QSqlDatabase::addDatabase("QMYSQL");
@@ -432,6 +440,7 @@ void user::on_comboBox_activated(int index = 0)
 
 void user::on_comboBox_2_activated(int index = 0)
 {
+    index =index + 0;
     title = ui->comboBox_2->currentText();
     ui->stackedWidget->setCurrentIndex(7);
     database = QSqlDatabase::addDatabase("QMYSQL");
@@ -506,26 +515,26 @@ void user::on_comboBox_2_activated(int index = 0)
     database.close();
 }
 
-void user::on_pushButton_15_clicked()
+void user::on_pushButton_back_clicked()
 {
-    //c
+
     database.close();
     ui->comboBox_2->clear();
     ui->stackedWidget_2->setCurrentIndex(0);
     ui->comboBox->setCurrentIndex(-1);
 }
 
-void user::on_pushButton_16_clicked()
+void user::on_pushButton_logout_clicked()
 {
-    //c
+
     database.close();
     close();
 }
 
 
-void user::on_pushButton_17_clicked()
+void user::on_pushButton_go_back_7_clicked()
 {
-    //c
+
     database.close();
     ui->stackedWidget->setCurrentIndex(0);
     ui->stackedWidget_2->setCurrentIndex(0);

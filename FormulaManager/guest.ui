@@ -73,7 +73,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_logout">
    <property name="geometry">
     <rect>
      <x>1360</x>
@@ -104,14 +104,14 @@
      <x>0</x>
      <y>90</y>
      <width>1472</width>
-     <height>570</height>
+     <height>561</height>
     </rect>
    </property>
    <property name="currentIndex">
     <number>0</number>
    </property>
    <widget class="QWidget" name="page">
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="pushButton_view_formula">
      <property name="geometry">
       <rect>
        <x>631</x>
@@ -133,7 +133,7 @@
     </widget>
    </widget>
    <widget class="QWidget" name="page_2">
-    <widget class="QPushButton" name="pushButton_10">
+    <widget class="QPushButton" name="pushButton_go_back">
      <property name="geometry">
       <rect>
        <x>670</x>

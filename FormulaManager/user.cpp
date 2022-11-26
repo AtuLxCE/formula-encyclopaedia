@@ -308,38 +308,56 @@ void user::on_pushButton_6_clicked()
 
 void user::on_pushButton_9_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    //c
     database.close();
+    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget_2->setCurrentIndex(0);
+    ui->comboBox->setCurrentIndex(-1);
 }
 
 void user::on_pushButton_10_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    //c
     database.close();
+    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget_2->setCurrentIndex(0);
+    ui->comboBox->setCurrentIndex(-1);
 }
 
 void user::on_pushButton_11_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    //c
     database.close();
+    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget_2->setCurrentIndex(0);
+    ui->comboBox->setCurrentIndex(-1);
 }
 
 void user::on_pushButton_12_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    //c
     database.close();
+    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget_2->setCurrentIndex(0);
+    ui->comboBox->setCurrentIndex(-1);
 }
 
 void user::on_pushButton_13_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    //c
     database.close();
+    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget_2->setCurrentIndex(0);
+    ui->comboBox->setCurrentIndex(-1);
 }
 
 void user::on_pushButton_14_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(0);
+    //c
     database.close();
+    ui->stackedWidget->setCurrentIndex(0);
+    ui->stackedWidget_2->setCurrentIndex(0);
+    ui->comboBox->setCurrentIndex(-1);
 }
 
 void user::on_comboBox_activated(int index = 0)
@@ -488,14 +506,10 @@ void user::on_comboBox_2_activated(int index = 0)
     database.close();
 }
 
-void user::on_pushButton_7_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(0);
-    database.close();
-}
-
 void user::on_pushButton_15_clicked()
 {
+    //c
+    database.close();
     ui->comboBox_2->clear();
     ui->stackedWidget_2->setCurrentIndex(0);
     ui->comboBox->setCurrentIndex(-1);
@@ -503,15 +517,19 @@ void user::on_pushButton_15_clicked()
 
 void user::on_pushButton_16_clicked()
 {
+    //c
+    database.close();
     close();
 }
 
 
 void user::on_pushButton_17_clicked()
 {
-
+    //c
+    database.close();
     ui->stackedWidget->setCurrentIndex(0);
     ui->stackedWidget_2->setCurrentIndex(0);
     ui->comboBox->setCurrentIndex(-1);
+    ui->comboBox_2->clear();
 }
 

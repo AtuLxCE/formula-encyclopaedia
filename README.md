@@ -17,6 +17,6 @@ The proposal and the report of the project can be found in this [link](https://d
 ## Contributors
 The major contributors of the project are :
 - [Atul Shreewastav](https://github.com/AtuLxCE)
-- [Bidhan Acharya](https://github.com/Bidhan99)
+- [Bidhan Acharya](https://github.com/acharyadhan)
 - [Nischal Paduel](https://github.com/PaudelNischal)
 - [Yugratna Humagain](https://github.com/yugratna19).

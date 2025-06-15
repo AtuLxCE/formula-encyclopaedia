@@ -7,8 +7,8 @@
 
 “Formula Encyclopedia 2.0” is the improvised version of our first project “Formula Encyclopedia” related with all the formula required for the students. As finding a certain formula can get difficult, in general, this program is made to provide the users formula required in the engineering journey of BCT. 
 ## Objective
-- To develop an application that compiles most of the formulas
-- To increase the efficiency of students in solving problems
+- To develop an application that compiles most of the formulas.
+- To increase the efficiency of students in solving problems.
 - To overcome the limitations of [Formula Encylopedia](https://github.com/yugratna19/C-Project).
  
 ## Documentation
